@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div style="display: flex; flex-direction: row;justify-content: space-around; align-items: flex-start;">
+        <div>
+            <h1>
+                Nome
+            </h1>
+            <br>
+            <input type="text" id="nome">
+
+            <br>
+
+            <h1>
+                Cognome
+            </h1>
+            <br>
+            <input type="text" id="cognome">
+        
+            <br>
+
+            <h1>
+                Indirizzo
+            </h1>
+            <br>
+            <input type="text" id="indirizzo">
+
+            <br>
+        
+            <input type="button" value="Cliccami" onclick="stampa()">
+        </div>
+        <div>
+            <h1>
+                Nome:
+            </h1>
+            <br>
+            <p id="destNome"></p>
+
+            <br>
+
+            <h1>
+                Cognome:
+            </h1>
+            <br>
+            <p id="destCognome"></p>
+
+            <br>
+            
+            <h1>
+                Indirizzo:
+            </h1>
+            <br>
+            <p id="destIndirizzo"></p>
+
+            <br>
+            
+        </div>
+    </div>
+    
+
+</body>
+<script>
+    function stampa(){
+        var printNome = document.getElementById("nome").value;
+        var printCognome = document.getElementById("cognome").value;
+        var printIndirizzo = document.getElementById("indirizzo").value;
+        document.getElementById("destNome").innerHTML = printNome;
+        document.getElementById("destCognome").innerHTML = printCognome;
+        document.getElementById("destIndirizzo").innerHTML = printIndirizzo;
+}
+</script>
+</html>
