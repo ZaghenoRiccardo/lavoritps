@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div style="display: flex; flex-direction: row;justify-content: space-around; align-items: flex-start;">
+        <div>
+            <h1>
+                Nome
+            </h1>
+            <br>
+            <input type="text" id="nome">
+
+            <br>
+
+            <h1>
+                Cognome
+            </h1>
+            <br>
+            <input type="text" id="cognome">
+        
+            <br>
+
+			<h1>
+                Città
+            </h1>
+            <br>
+            <input type="text" id="citta">
+
+            <h1>
+                Indirizzo
+            </h1>
+            <br>
+            <input type="text" id="indirizzo">
+
+            <br>
+
+			<h1>
+                Anno di nascita
+            </h1>
+            <br>
+            <input type="text" id="anno">
+			<br>
+            <input type="button" value="Cliccami" onclick="stampa()">
+        </div>
+        <div>
+            <h1>
+                Nome:
+            </h1>
+            <br>
+            <p id="destNome"></p>
+
+            <br>
+
+            <h1>
+                Cognome:
+            </h1>
+            <br>
+            <p id="destCognome"></p>
+
+            <br>
+            
+            <h1>
+                Città:
+            </h1>
+            <br>
+            <p id="destCitta"></p>
+
+            <br>
+            
+            <h1>
+                Indirizzo:
+            </h1>
+            <br>
+            <p id="destIndirizzo"></p>
+			
+            <h1>
+                Anno di nascita:
+            </h1>
+            <br>
+            <p id="destAnno"></p>
+
+			<br>
+
+			<p id="destGenerazione"></p>
+
+        </div>
+    </div>
+    
+
+</body>
+<script>
+    function stampa(){
+        var printNome = document.getElementById("nome").value;
+        var printCognome = document.getElementById("cognome").value;
+        var printIndirizzo = document.getElementById("indirizzo").value;
+		var printCitta = document.getElementById("citta").value;
+		var printAnno = document.getElementById("anno").value;
+
+		switch (true) {
+            case printAnno >= 1901 && printAnno <= 1927:
+				document.getElementById("destGenerazione").innerHTML = "Generazione Grandiosa";
+				break;
+
+            case printAnno >= 1928 && printAnno <= 1945:
+				document.getElementById("destGenerazione").innerHTML = "Generazione Silenziosa";
+				break;
+
+			case printAnno >= 1946 && printAnno <= 1964:
+				document.getElementById("destGenerazione").innerHTML = "Generazione Baby Boomers";
+				break;
+
+			case printAnno >= 1965 && printAnno <= 1980:
+			document.getElementById("destGenerazione").innerHTML = "Generazione X";
+			break;
+
+			case printAnno >= 1981 && printAnno <= 1996:
+				document.getElementById("destGenerazione").innerHTML = "Generazione Millenials";
+				break;
+
+            case printAnno >= 1997 && printAnno <= 2012:
+				document.getElementById("destGenerazione").innerHTML = "Generazione Z";
+				break;
+
+            case printAnno >= 2013:
+				document.getElementById("destGenerazione").innerHTML = "Generazione Alpha";
+				break;
+
+
+			default:
+				document.getElementById("destGenerazione").innerHTML = "Generazione molto vecchia";
+				break;
+		}
+
+        document.getElementById("destNome").innerHTML = printNome;
+        document.getElementById("destCognome").innerHTML = printCognome;
+        document.getElementById("destIndirizzo").innerHTML = printIndirizzo;
+		document.getElementById("destCitta").innerHTML = printCitta;
+		document.getElementById("destAnno").innerHTML = printAnno;
+}
+</script>
+</html>
