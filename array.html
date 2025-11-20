@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Array :
+    </h1>
+    <p id="array">
+
+    </p>
+    <h1>
+        Array Minimo 50:
+    </h1>
+    <p id="arrayMin50">
+
+    </p>
+    <h1>
+        Max:
+    </h1>
+    <p id="max">
+
+    </p>
+    <h1>
+       Min: 
+    </h1>
+    <p id="min">
+
+    </p>
+    <h1>
+        Media:
+    </h1>
+    <p id="media">
+
+    </p>
+</body>
+<script>
+  let array = [];
+let arrayMin50 = [];
+
+for(let i = 0 ; i < 100; i++ ){
+    array.push(Math.floor(Math.random()*101));
+}
+
+let media;
+let sumArray = 0;
+let max = 0;
+let min = 100;
+
+for (let i = 0; i < 100; i++) {
+    sumArray = sumArray + array[i];
+    if (array[i] > max){
+        max = array[i];
+    }
+
+    if (array[i] < min){
+        min = array[i];
+    }
+
+    if (array[i] > 50){
+        arrayMin50.push(array[i]);
+    }
+}
+
+media = sumArray / 100;
+
+
+document.write('array').innerHTML = array;
+document.getElementById('arrayMin50').innerHTML = arrayMin50;
+document.getElementById("media").innerHTML = media;
+document.getElementById("max").innerHTML = max;
+document.getElementById("min").innerHTML = min;
+</script>
+</html>
