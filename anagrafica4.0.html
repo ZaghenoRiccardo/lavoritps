@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div style="display: flex; flex-direction: row;justify-content: space-around; align-items: flex-start;">
+        <div>
+            <h1>
+                Nome
+            </h1>
+            <br>
+            <input type="text" id="nome">
+
+            <br>
+
+            <h1>
+                Cognome
+            </h1>
+            <br>
+            <input type="text" id="cognome">
+        
+            <br>
+
+			<h1>
+                Città
+            </h1>
+            <br>
+            <input type="text" id="citta">
+
+            <h1>
+                Indirizzo
+            </h1>
+            <br>
+            <input type="text" id="indirizzo">
+
+            <br>
+
+			<h1>
+                Anno di nascita
+            </h1>
+            <br>
+            <input type="text" id="anno">
+			<br>
+            <input type="button" value="Cliccami" onclick="stampa()">
+            <br><br>
+
+            <div>
+                <input type="radio" name="sesso" value="uomo">
+                "Uomo"
+                <br>
+                <input type="radio" name="sesso" value="donna">
+                "Donna"
+                <br>
+                <input type="radio" name="sesso" value="altro">
+                "Altro"
+                <input type="button" onclick="controlla();" value="Invia">
+            </div>
+            <br><br>
+
+            <div>
+                <input type="checkbox" name="auto" value="auto" id="box1" onclick="onClickHandler(document.getElementById('box1').value);">
+                <label for="veicolo1">Auto</label>
+                <br>
+                <input type="checkbox" name="moto" value="moto" id="box2" onclick="onClickHandler(document.getElementById('box2').value);">
+                <label for="veicolo2">Moto</label>
+                <br>
+                <input type="checkbox" name="cavallo" value="cavallo" id="box3" onclick="onClickHandler(document.getElementById('box3').value);">
+                <label for="veicolo3">Cavallo</label>
+                <br>
+                <input type="checkbox" name="mucca" value="mucca" id="box4" onclick="onClickHandler(document.getElementById('box4').value);">
+                <label for="veicolo4">Mucca</label>
+                <br>
+            </div>
+            <br><br>
+
+            <div>
+                <div id="div0">
+                    <select id="prov" onchange="validate()">
+                        <option value="0">Select</option>
+                        <option value="1">Stem</option>
+                        <option value="2">Umanistica</option>
+                    </select>
+                </div>
+                <div id="div1" style="visibility: hidden;">
+                    <select id="comM">
+                        <option value="0">Select</option>
+                        <option value="1">Matematica</option>
+                        <option value="2">Informatica</option>
+                    </select>
+                </div>
+                <div id="div2" style="visibility: hidden;">
+                    <select id="comP">
+                        <option value="0">Select</option>
+                        <option value="1">Italiano</option>
+                        <option value="2">Storia</option>
+                    </select>
+                </div>
+            </div>
+            <br><br>
+
+            <div>
+                <form name="myForm">
+                    <select name="provincia">
+                        <option value="MI">Milano</option>
+                        <option value="TO">Torino</option>
+                        <option value="VA">Varese</option>
+                    </select>
+                </form>
+            </div>
+            <input type="button" value="premi" onclick="seleziona()">
+            <br><br>
+
+        </div>
+        <div>
+            <h1>
+                Nome:
+            </h1>
+            <br>
+            <p id="destNome"></p>
+
+            <br>
+
+            <h1>
+                Cognome:
+            </h1>
+            <br>
+            <p id="destCognome"></p>
+
+            <br>
+            
+            <h1>
+                Città:
+            </h1>
+            <br>
+            <p id="destCitta"></p>
+
+            <br>
+            
+            <h1>
+                Indirizzo:
+            </h1>
+            <br>
+            <p id="destIndirizzo"></p>
+            <br>
+			
+            <h1>
+                Anno di nascita:
+            </h1>
+            <br>
+            <p id="destAnno"></p>
+
+			<br>
+
+			<p id="destGenerazione"></p>
+
+            <br>
+
+            <h1>
+                Sesso:
+            </h1>
+            <br>
+            <p id="risp"></p>
+
+            <br>
+               
+            <h1>
+                Veicoli
+            </h1>
+            <br>
+
+            <p id="print"></p>
+            
+            <br>
+            <h1>
+                Provincia
+            </h1>
+            <br>
+            <p id="provincia"></p>
+
+        </div>
+        
+    </div>
+    
+
+</body>
+<script>
+    function stampa(){
+        let arr={nome:'', cognome : '', indirizzo : '', citta : '', anno : ''}
+        
+        arr.nome = document.getElementById("nome").value;
+        arr.cognome = document.getElementById("cognome").value;
+        arr.indirizzo = document.getElementById("indirizzo").value;
+		arr.citta = document.getElementById("citta").value;
+		arr.anno = document.getElementById("anno").value;
+
+        
+
+		switch (true) {
+            case arr.anno >= 1901 && arr.anno <= 1927:
+				document.getElementById("destGenerazione").innerHTML = "Generazione Grandiosa";
+				break;
+
+            case arr.anno >= 1928 && arr.anno <= 1945:
+				document.getElementById("destGenerazione").innerHTML = "Generazione Silenziosa";
+				break;
+
+			case arr.anno >= 1946 && arr.anno <= 1964:
+				document.getElementById("destGenerazione").innerHTML = "Generazione Baby Boomers";
+				break;
+
+			case arr.anno >= 1965 && arr.anno <= 1980:
+			document.getElementById("destGenerazione").innerHTML = "Generazione X";
+			break;
+
+			case arr.anno >= 1981 && arr.anno <= 1996:
+				document.getElementById("destGenerazione").innerHTML = "Generazione Millenials";
+				break;
+
+            case arr.anno >= 1997 && arr.anno <= 2012:
+				document.getElementById("destGenerazione").innerHTML = "Generazione Z";
+				break;
+
+            case arr.anno >= 2013:
+				document.getElementById("destGenerazione").innerHTML = "Generazione Alpha";
+				break;
+
+
+			default:
+				document.getElementById("destGenerazione").innerHTML = "Generazione molto vecchia";
+				break;
+		}
+
+        document.getElementById("destNome").innerHTML = arr.nome;
+        document.getElementById("destCognome").innerHTML = arr.cognome;
+        document.getElementById("destIndirizzo").innerHTML = arr.indirizzo;
+		document.getElementById("destCitta").innerHTML = arr.citta;
+		document.getElementById("destAnno").innerHTML = arr.anno;
+}
+
+    function controlla(){
+        for (let i = 0; i < document.getElementsByName("sesso").length; i++) {
+            if (document.getElementsByName("sesso")[i].checked) {
+                document.getElementById("risp").innerHTML = document.getElementsByName("sesso")[i].value;
+            }
+            
+        }
+    }
+
+    function onClickHandler(s){
+        document.getElementById("print").innerHTML += s + ", ";
+    }
+
+    function validate(){
+        if(prov == 0){
+            document.getElementById("div1").style.visibility = "hidden";
+            document.getElementById("div2").style.visibility = "hidden";
+        }else if (prov == 1){
+            document.getElementById("div1").style.visibility = "visible";
+            document.getElementById("div2").style.visibility = "hidden";
+        }else {
+            document.getElementById("div1").style.visibility = "hidden";
+            document.getElementById("div2").style.visibility = "visible";
+        }
+    }
+
+    function seleziona(){
+        let options = document.forms.MyForm.provincia.options;
+        let selectedOptions = {provincia: "" };
+
+        for (var i = 0; i < options.length; i++) {
+            if (options[i].selected) {
+                let x=options[i].value;
+                selectedOptions.push(x);
+            }
+        }
+
+        document.getElementById("provincia").innerHTML = x;
+    }
+
+</script>
+</html>
