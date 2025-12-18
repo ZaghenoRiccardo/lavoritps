@@ -1,77 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>
-        Array :
-    </h1>
-    <p id="array">
+<html>
 
-    </p>
-    <h1>
-        Array Minimo 50:
-    </h1>
-    <p id="arrayMin50">
+    <head>
 
-    </p>
-    <h1>
-        Max:
-    </h1>
-    <p id="max">
+        <title>Array Numeri</title>
 
-    </p>
-    <h1>
-       Min: 
-    </h1>
-    <p id="min">
+    </head>
 
-    </p>
-    <h1>
-        Media:
-    </h1>
-    <p id="media">
+    <body>
 
-    </p>
-</body>
-<script>
-  let array = [];
-let arrayMin50 = [];
+    </body>
 
-for(let i = 0 ; i < 100; i++ ){
-    array.push(Math.floor(Math.random()*101));
-}
+    <script>
 
-let media;
-let sumArray = 0;
-let max = 0;
-let min = 100;
+        let numeri = [];
 
-for (let i = 0; i < 100; i++) {
-    sumArray = sumArray + array[i];
-    if (array[i] > max){
-        max = array[i];
-    }
+        for (let i = 0; i < 100; i++) {
+            numeri[i] = Math.floor(Math.random() * 201) - 100;
+        }
 
-    if (array[i] < min){
-        min = array[i];
-    }
+        let somma = 0;
+        for (let i = 0; i < numeri.length; i++) {
+            somma += numeri[i];
+        }
+        let media = somma / numeri.length;
 
-    if (array[i] > 50){
-        arrayMin50.push(array[i]);
-    }
-}
+        let max = numeri[0];
+        let min = numeri[0];
 
-media = sumArray / 100;
+        for (let i = 1; i < numeri.length; i++) {
+            if (numeri[i] > max) {
+                max = numeri[i];
+            }
+            if (numeri[i] < min) {
+                min = numeri[i];
+            }
+        }
 
+        let maggiori50 = [];
 
-document.write('array').innerHTML = array;
-document.getElementById('arrayMin50').innerHTML = arrayMin50;
-document.getElementById("media").innerHTML = media;
-document.getElementById("max").innerHTML = max;
-document.getElementById("min").innerHTML = min;
-</script>
+        for (let i = 0; i < numeri.length; i++) {
+            if (numeri[i] > 50) {
+               maggiori50.push(numeri[i]);
+            }
+        }
+
+        document.write("Array: " + numeri + "<br><br>");
+        document.write("Media: " + media + "<br>");
+        document.write("Massimo: " + max + "<br>");
+        document.write("Minimo: " + min + "<br><br>");
+        document.write("Numeri maggiori di 50: " + maggiori50);
+        
+    </script>
+
 </html>
