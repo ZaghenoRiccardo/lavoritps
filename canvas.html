@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <canvas id="c"></canvas>
+
+    <script>
+        const canvas = document.getElementById('c');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        ctx.fillStyle = "#f0f5f0";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        const x = 200;
+        const y = 200;
+        const r = 100;
+
+	      ctx.fillStyle = "#32a852";
+	      ctx.fillRect(0,0, canvas.width, canvas.height);
+
+        ctx.beginPath();
+        ctx.arc(x, y, r, 0, 7); 
+        ctx.stroke();
+
+        ctx.beginPath();
+        const punti = 5;
+        
+        for (let i = 0; i <= punti; i++) {
+            let a = (Math.PI * 2 * i * 2) / punti - (Math.PI / 2);
+            
+            let px = x + Math.cos(a) * r;
+            let py = y + Math.sin(a) * r;
+
+            if (i === 0) ctx.moveTo(px, py);
+            else ctx.lineTo(px, py);
+        }
+
+        ctx.stroke(); // Solo contorno, niente colore
+    </script>
+
+</body>
+</html>
