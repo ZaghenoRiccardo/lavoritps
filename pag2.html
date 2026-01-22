@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <p>
+                    Nome
+                </p>
+            </td>
+            <td>
+                <p>
+                    Cognome
+                </p>
+            </td>
+            <td>
+                Età
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p id="fName"></p>
+            </td>
+            <td>
+                <p id="lName"></p>
+            </td>
+            <td>
+                <p id="age"></p>
+            </td>
+        </tr>
+    </table>
+    <input type="button" id="bottone" value="Button" onclick="location.href='anagrafica5.html'">
+</body>
+
+<style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-family: Arial, sans-serif;
+    }
+    
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+    }
+</style>
+
+<script>
+
+  let elenco = JSON.parse(localStorage.getItem("elenco")) || [];
+
+  if (elenco.length > 0) {
+    let persona = elenco[0];
+
+    document.getElementById("fName").textContent = persona.fName;
+    document.getElementById("lName").textContent = persona.lName;
+    document.getElementById("age").textContent   = persona.eta;
+  }
+
+</script>
+
+</html>
