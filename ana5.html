@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pag1</title>
+</head>
+<body>
+    <h1>
+        Nome:
+    </h1>
+    <input type="text" id="nome">
+    <br>
+    <h1>
+        Cognome:
+    </h1>
+    <input type="text" id="cognome">
+    <br>
+    <input type="button" value="inserisci" onclick="ana()">
+    <br>
+    <a href="ana5tab.html">Passa alla seconda pagina</a>
+</body>
+
+<script>
+    
+    let n = "";
+    let c = "";
+    let ele = []; 
+        
+    function ana() {
+
+        localStorage.getItem("elenco");
+
+        n = document.getElementById("nome").value;
+        c = document.getElementById("cognome").value;
+
+        const persone = {}
+        persone.nome = n;
+        persone.cognome = c;
+
+        ele.push(persone);
+
+        localStorage.setItem("elenco", JSON.stringify(ele));
+    }
+
+</script>
+
+<style>
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 20px;
+        color: #333;
+    }
+    
+    table {
+        width: 80%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        background-color: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    th, td {
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+    
+    th {
+        background-color: #4CAF50;
+        color: white;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    
+    
+    
+    input[type="button"] {
+        display: block;
+        margin-top: 25px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    input[type="button"]:hover {
+        background-color: #45a049;
+    }
+    
+    td p {
+        margin: 0;
+    }
+    </style>
+    
+</html>
