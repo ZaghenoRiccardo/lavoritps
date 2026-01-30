@@ -16,15 +16,33 @@
     </h1>
     <input type="text" id="cognome">
     <br>
+    <h1>
+        Città
+    </h1>
+    <input type="text" id="citta">
+    <br>
+    <h1>
+        Indirizzo
+    </h1>
+    <input type="text" id="indirizzo">
+    <br>
+    <h1>
+        Anno di nascita
+    </h1>
+    <input type="text" id="annoNascita">
+    <br>
     <input type="button" value="inserisci" onclick="ana()">
     <br>
-    <a href="ana5tab.html">Passa alla seconda pagina</a>
+    <a href="pag2.html">Passa alla seconda pagina</a>
 </body>
 
 <script>
     
     let n = "";
     let c = "";
+    let cit = "";
+    let i = "";
+    let a = "";
     let ele = []; 
         
     function ana() {
@@ -33,10 +51,17 @@
 
         n = document.getElementById("nome").value;
         c = document.getElementById("cognome").value;
+        cit = document.getElementById("citta").value;
+        i = document.getElementById("indirizzo").value;
+        a = document.getElementById("annoNascita").value;
+        
 
         const persone = {};
         persone.nome = n;
         persone.cognome = c;
+        persone.citta = cit;
+        persone.indirizzo = i;
+        persone.annoNascita = a;
 
         ele.push(persone);
 
@@ -102,3 +127,7 @@
     </style>
     
 </html>
+    
+
+
+
