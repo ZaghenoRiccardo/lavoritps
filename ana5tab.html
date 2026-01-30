@@ -60,11 +60,11 @@
 <script>
     
     let obj = JSON.parse(localStorage.getItem("elenco"));
-    let n = obj.nome;
-    let c = obj.cognome;
-    let cit = obj.citta;
-    let i = obj.indirizzo;
-    let a = obj.annoNascita
+    let n = obj[0].nome;
+    let c = obj[0].cognome;
+    let cit = obj[0].citta;
+    let i = obj[0].indirizzo;
+    let a = obj[0].annoNascita
 
     document.getElementById("fName").innerHTML = n;
     document.getElementById("lName").innerHTML= c;
