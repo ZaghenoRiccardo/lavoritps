@@ -18,6 +18,21 @@
                     Cognome
                 </p>
             </td>
+            <td>
+                <p>
+                    Città
+                </p>
+            </td>
+            <td>
+                <p>
+                    Indirizzo
+                </p>
+            </td>
+            <td>
+                <p>
+                    Anno di nascita
+                </p>
+            </td>
         </tr>
         <tr>
             <td>
@@ -25,22 +40,37 @@
             </td>
             <td>
                 <p id="lName"></p>
+            </td>
+            <td>
+                <p id="city"></p>
+            </td> 
+            <td>
+                <p id="address"></p>
+            </td> 
+            <td>
+                <p id="age"></p>
             </td>    
         </tr>
     </table>
     <br>
-    <a href="ana5.html">Passa alla pagina precedente</a>
+    <a href="pag1.html">Passa alla pagina precedente</a>
 
 </body>
 
 <script>
     
     let obj = JSON.parse(localStorage.getItem("elenco"));
-    let n = obj[0].nome;
-    let c = obj[0].cognome;
+    let n = obj.nome;
+    let c = obj.cognome;
+    let cit = obj.citta;
+    let i = obj.indirizzo;
+    let a = obj.annoNascita
 
     document.getElementById("fName").innerHTML = n;
     document.getElementById("lName").innerHTML= c;
+    document.getElementById("city").innerHTML = cit;
+    document.getElementById("address").innerHTML = i;
+    document.getElementById("age").innerHTML = a;
 
 </script>
 
@@ -62,5 +92,4 @@
     }
 </style>
 
-</html>
 </html>
