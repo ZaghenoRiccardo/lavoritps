@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pag2</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <p>
+                    Nome
+                </p>
+            </td>
+            <td>
+                <p>
+                    Cognome
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p id="fName"></p>
+            </td>
+            <td>
+                <p id="lName"></p>
+            </td>    
+        </tr>
+    </table>
+    <br>
+    <a href="pag1.html">Passa alla pasina precedente</a>
+
+</body>
+
+<script>
+    
+    let arr = JSON.parse(localStorage.getItem("elenco"));
+    let nome = arr[0];
+    let cognome = arr[1];
+
+    nome = document.getElementById(fName);
+    cognome = document.getElementById(lName);
+
+</script>
+
+<style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-family: Arial, sans-serif;
+    }
+    
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+    }
+</style>
+
+</html>
