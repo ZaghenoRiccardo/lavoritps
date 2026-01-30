@@ -35,12 +35,12 @@
 
 <script>
     
-    let arr = JSON.parse(localStorage.getItem("elenco"));
-    let nome = arr[0];
-    let cognome = arr[1];
+    let obj = JSON.parse(localStorage.getItem("elenco"));
+    let n = obj.nome;
+    let c = obj.cognome;
 
-    document.getElementById("fName").innerHTML = nome;
-    document.getElementById("lName").innerHTML= cognome;
+    document.getElementById("fName").innerHTML = n;
+    document.getElementById("lName").innerHTML= c;
 
 </script>
 
