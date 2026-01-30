@@ -36,8 +36,8 @@
 <script>
     
     let obj = JSON.parse(localStorage.getItem("elenco"));
-    let n = obj.nome;
-    let c = obj.cognome;
+    let n = obj[0].nome;
+    let c = obj[0].cognome;
 
     document.getElementById("fName").innerHTML = n;
     document.getElementById("lName").innerHTML= c;
