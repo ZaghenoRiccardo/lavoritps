@@ -44,7 +44,8 @@
     let i = "";
     let a = "";
     let ele = []; 
-        
+
+    /*
     function ana() {
 
         localStorage.getItem("elenco");
@@ -67,6 +68,57 @@
 
         localStorage.setItem("elenco", JSON.stringify(ele));
     }
+    */
+    function ana() {
+    // Leggi l'elenco esistente dal localStorage o inizializza un array vuoto
+    let elenco = JSON.parse(localStorage.getItem("elenco"));
+
+    // Prendi i valori dagli input
+    n = document.getElementById("nome").value;
+    c = document.getElementById("cognome").value;
+    cit = document.getElementById("citta").value;
+    i = document.getElementById("indirizzo").value;
+    a = document.getElementById("annoNascita").value;
+
+    // Crea un nuovo oggetto persona
+    const persone = {
+        nome: n,
+        cognome: c,
+        citta: cit,
+        indirizzo: i,
+        annoNascita: a
+    };
+
+    // Aggiungi alla lista
+    elenco.push(persone);
+
+    // Salva di nuovo in localStorage
+    localStorage.setItem("elenco", JSON.stringify(elenco));
+
+    // Aggiungi una nuova riga alla tabella
+    const table = document.querySelector("table");
+    const newRow = table.insertRow(-1); // Inserisce in fondo
+
+    // Crea le celle e le riempie
+    const cellNome = newRow.insertCell(0);
+    const cellCognome = newRow.insertCell(1);
+    const cellCitta = newRow.insertCell(2);
+    const cellIndirizzo = newRow.insertCell(3);
+    const cellAnno = newRow.insertCell(4);
+
+    cellNome.innerHTML = n;
+    cellCognome.innerHTML = c;
+    cellCitta.innerHTML = cit;
+    cellIndirizzo.innerHTML = i;
+    cellAnno.innerHTML = a;
+
+    // Optional: puoi anche resettare gli input dopo inserimento
+    document.getElementById("nome").value = "";
+    document.getElementById("cognome").value = "";
+    document.getElementById("citta").value = "";
+    document.getElementById("indirizzo").value = "";
+    document.getElementById("annoNascita").value = "";
+}
 
 </script>
 
