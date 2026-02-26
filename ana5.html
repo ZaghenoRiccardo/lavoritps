@@ -45,29 +45,23 @@
     let a = "";
     let ele = []; 
     
-    function ana() {
+    <script>
 
-        localStorage.getItem("elenco");
-        
-        n = document.getElementById("nome").value;
-        c = document.getElementById("cognome").value;
-        cit = document.getElementById("citta").value;
-        i = document.getElementById("indirizzo").value;
-        a = document.getElementById("annoNascita").value;
-        
+function ana() {
+    let ele = JSON.parse(localStorage.getItem("elenco"));
 
-        const persone = {};
-        persone.nome = n;
-        persone.cognome = c;
-        persone.citta = cit;
-        persone.indirizzo = i;
-        persone.annoNascita = a;
+    const persone = {
+        nome: document.getElementById("nome").value,
+        cognome: document.getElementById("cognome").value,
+        citta: document.getElementById("citta").value,
+        indirizzo: document.getElementById("indirizzo").value,
+        annoNascita: document.getElementById("annoNascita").value
+    };
 
-        ele.push(persone);
+    ele.push(persone);
 
-        localStorage.setItem("elenco", JSON.stringify(ele));
-    }
-    
+    localStorage.setItem("elenco", JSON.stringify(ele));
+}
 </script>
 
 <style>
