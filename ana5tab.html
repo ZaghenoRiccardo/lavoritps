@@ -24,36 +24,34 @@
 
 <script>
 
-let elenco = JSON.parse(localStorage.getItem("elenco"));
+    let elenco = JSON.parse(localStorage.getItem("elenco"));
+    let tabella = document.getElementById("tabella");
 
-let tabella = document.getElementById("tabella");
+    for (let i = 0; i < elenco.length; i++) {
+        let tr = document.createElement("tr");
 
-elenco.forEach(function(persona) {
-    
-    let tr = document.createElement("tr");
+        let tdNome = document.createElement("td");
+        tdNome.textContent = elenco[i].nome;
+        tr.appendChild(tdNome);
 
-    let tdNome = document.createElement("td");
-    let tdCognome = document.createElement("td");
-    let tdCitta = document.createElement("td");
-    let tdIndirizzo = document.createElement("td");
-    let tdAnno = document.createElement("td");
+        let tdCognome = document.createElement("td");
+        tdCognome.textContent = elenco[i].cognome;
+        tr.appendChild(tdCognome);
 
-    tdNome.textContent = persona.nome;
-    tdCognome.textContent = persona.cognome;
-    tdCitta.textContent = persona.citta;
-    tdIndirizzo.textContent = persona.indirizzo;
-    tdAnno.textContent = persona.annoNascita;
+        let tdCitta = document.createElement("td");
+        tdCitta.textContent = elenco[i].citta;
+        tr.appendChild(tdCitta);
 
-    tr.appendChild(tdNome);
-    tr.appendChild(tdCognome);
-    tr.appendChild(tdCitta);
-    tr.appendChild(tdIndirizzo);
-    tr.appendChild(tdAnno);
+        let tdIndirizzo = document.createElement("td");
+        tdIndirizzo.textContent = elenco[i].indirizzo;
+        tr.appendChild(tdIndirizzo);
 
-    tabella.appendChild(tr);
+        let tdAnno = document.createElement("td");
+        tdAnno.textContent = elenco[i].annoNascita;
+        tr.appendChild(tdAnno);
 
-});
-
+        tabella.appendChild(tr);
+    }
 </script>
 
 <style>
