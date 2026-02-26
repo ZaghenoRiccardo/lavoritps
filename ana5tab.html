@@ -6,75 +6,54 @@
     <title>pag2</title>
 </head>
 <body>
-    <table>
-        <tr>
-            <td>
-                <p>
-                    Nome
-                </p>
-            </td>
-            <td>
-                <p>
-                    Cognome
-                </p>
-            </td>
-            <td>
-                <p>
-                    Città
-                </p>
-            </td>
-            <td>
-                <p>
-                    Indirizzo
-                </p>
-            </td>
-            <td>
-                <p>
-                    Anno di nascita
-                </p>
-            </td>
-        </tr>
-        
-        <tr>
-            <td>
-                <p id="fName"></p>
-            </td>
-            <td>
-                <p id="lName"></p>
-            </td>
-            <td>
-                <p id="city"></p>
-            </td> 
-            <td>
-                <p id="address"></p>
-            </td> 
-            <td>
-                <p id="age"></p>
-            </td>    
-        </tr>
-        
-        
-    </table>
+    
+    <table id="tabella">
+    <tr>
+        <th>Nome</th>
+        <th>Cognome</th>
+        <th>Città</th>
+        <th>Indirizzo</th>
+        <th>Anno di nascita</th>
+    </tr>
+</table>
+    
     <br>
     <a href="ana5.html">Passa alla pagina precedente</a>
 
 </body>
 
 <script>
-    
-    let obj = JSON.parse(localStorage.getItem("elenco"));
-    let n = obj[0].nome;
-    let c = obj[0].cognome;
-    let cit = obj[0].citta;
-    let i = obj[0].indirizzo;
-    let a = obj[0].annoNascita;
 
-    document.getElementById("fName").innerHTML = n;
-    document.getElementById("lName").innerHTML= c;
-    document.getElementById("city").innerHTML = cit;
-    document.getElementById("address").innerHTML = i;
-    document.getElementById("age").innerHTML = a;
+let elenco = JSON.parse(localStorage.getItem("elenco"));
+
+let tabella = document.getElementById("tabella");
+
+elenco.forEach(function(persona) {
     
+    let tr = document.createElement("tr");
+
+    let tdNome = document.createElement("td");
+    let tdCognome = document.createElement("td");
+    let tdCitta = document.createElement("td");
+    let tdIndirizzo = document.createElement("td");
+    let tdAnno = document.createElement("td");
+
+    tdNome.textContent = persona.nome;
+    tdCognome.textContent = persona.cognome;
+    tdCitta.textContent = persona.citta;
+    tdIndirizzo.textContent = persona.indirizzo;
+    tdAnno.textContent = persona.annoNascita;
+
+    tr.appendChild(tdNome);
+    tr.appendChild(tdCognome);
+    tr.appendChild(tdCitta);
+    tr.appendChild(tdIndirizzo);
+    tr.appendChild(tdAnno);
+
+    tabella.appendChild(tr);
+
+});
+
 </script>
 
 <style>
