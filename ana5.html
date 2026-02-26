@@ -95,29 +95,6 @@
     // Salva di nuovo in localStorage
     localStorage.setItem("elenco", JSON.stringify(elenco));
 
-    // Aggiungi una nuova riga alla tabella
-    const table = document.querySelector("table");
-    const newRow = table.insertRow(-1); // Inserisce in fondo
-
-    // Crea le celle e le riempie
-    const cellNome = newRow.insertCell(0);
-    const cellCognome = newRow.insertCell(1);
-    const cellCitta = newRow.insertCell(2);
-    const cellIndirizzo = newRow.insertCell(3);
-    const cellAnno = newRow.insertCell(4);
-
-    cellNome.innerHTML = n;
-    cellCognome.innerHTML = c;
-    cellCitta.innerHTML = cit;
-    cellIndirizzo.innerHTML = i;
-    cellAnno.innerHTML = a;
-
-    // Optional: puoi anche resettare gli input dopo inserimento
-    document.getElementById("nome").value = "";
-    document.getElementById("cognome").value = "";
-    document.getElementById("citta").value = "";
-    document.getElementById("indirizzo").value = "";
-    document.getElementById("annoNascita").value = "";
 }
 
 </script>
