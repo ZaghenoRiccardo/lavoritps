@@ -34,6 +34,7 @@
                 </p>
             </td>
         </tr>
+        <!--
         <tr>
             <td>
                 <p id="fName"></p>
@@ -51,6 +52,9 @@
                 <p id="age"></p>
             </td>    
         </tr>
+        -->
+        
+        
     </table>
     <br>
     <a href="ana5.html">Passa alla pagina precedente</a>
@@ -58,7 +62,7 @@
 </body>
 
 <script>
-    
+    /*
     let obj = JSON.parse(localStorage.getItem("elenco"));
     let n = obj[0].nome;
     let c = obj[0].cognome;
@@ -71,6 +75,24 @@
     document.getElementById("city").innerHTML = cit;
     document.getElementById("address").innerHTML = i;
     document.getElementById("age").innerHTML = a;
+    */
+
+    // Aggiungi una nuova riga alla tabella
+    const table = document.querySelector("table");
+    const newRow = table.insertRow(-1); // Inserisce in fondo
+
+    // Crea le celle e le riempie
+    const cellNome = newRow.insertCell(0);
+    const cellCognome = newRow.insertCell(1);
+    const cellCitta = newRow.insertCell(2);
+    const cellIndirizzo = newRow.insertCell(3);
+    const cellAnno = newRow.insertCell(4);
+
+    cellNome.innerHTML = n;
+    cellCognome.innerHTML = c;
+    cellCitta.innerHTML = cit;
+    cellIndirizzo.innerHTML = i;
+    cellAnno.innerHTML = a;
 
 </script>
 
