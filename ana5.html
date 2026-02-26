@@ -49,6 +49,8 @@
 
         localStorage.getItem("elenco");
 
+        for (let i = 0; i < elenco.length; i++){
+        
         n = document.getElementById("nome").value;
         c = document.getElementById("cognome").value;
         cit = document.getElementById("citta").value;
@@ -64,6 +66,7 @@
         persone.annoNascita = a;
 
         ele.push(persone);
+        }
 
         localStorage.setItem("elenco", JSON.stringify(ele));
     }
