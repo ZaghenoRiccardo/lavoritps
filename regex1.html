@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>indexRegex</title>
+</head>
+<body>
+    <h1>Inserisci la mail:</h1>
+    <input type="text" name="" id="inpText">
+    <br>
+    <input type="button" value="Inserisci" onclick="controlla()">
+    <p id = "test"></p>
+</body>
+
+<script>
+
+    function controlla(inpText){
+
+        let email = document.getElementById("inpText").value;
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if(emailRegex.test(email)){
+            document.getElementById("test").innerHTML = 1;
+        }else{
+            document.getElementById("test").innerHTML = 0;
+        }
+    }
+
+</script>
+
+</html>
