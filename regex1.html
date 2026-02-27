@@ -22,9 +22,9 @@
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if(emailRegex.test(email)){
-            document.getElementById("test").innerHTML = 1;
+            document.getElementById("test").innerHTML = "Email valida!";
         }else{
-            document.getElementById("test").innerHTML = 0;
+            document.getElementById("test").innerHTML = "Email non valida!";
         }
     }
 
