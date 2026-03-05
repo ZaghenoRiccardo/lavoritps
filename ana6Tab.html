@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pag2</title>
+</head>
+<body>
+    
+    <table id="tabella">
+    <tr>
+        <th>Nome</th>
+        <th>Cognome</th>
+        <th>Email</th>
+        <th>Codice Fiscale</th>
+        <th>Città</th>
+        <th>Indirizzo</th>
+        <th>CAP</th>
+        <th>Sesso</th>
+        <th>Anno di nascita</th>
+    </tr>
+</table>
+    
+    <br>
+    <a href="anagrafica6.html">Passa alla pagina precedente</a>
+
+</body>
+
+<script>
+
+    let elenco = JSON.parse(localStorage.getItem("elenco"));
+    let tabella = document.getElementById("tabella");
+
+    for (let i = 0; i < elenco.length; i++) {
+        let tr = document.createElement("tr");
+
+        let tdNome = document.createElement("td");
+        tdNome.textContent = elenco[i].nome;
+        tr.appendChild(tdNome);
+
+        let tdCognome = document.createElement("td");
+        tdCognome.textContent = elenco[i].cognome;
+        tr.appendChild(tdCognome);
+
+        let tdEmail = document.createElement("td");
+        tdEmail.textContent = elenco[i].email;
+        tr.appendChild(tdEmail);
+
+        let tdCodFiscale = document.createElement("td");
+        tdCodFiscale.textContent = elenco[i].codFiscale;
+        tr.appendChild(tdCodFiscale);
+
+        let tdCitta = document.createElement("td");
+        tdCitta.textContent = elenco[i].citta;
+        tr.appendChild(tdCitta);
+
+        let tdIndirizzo = document.createElement("td");
+        tdIndirizzo.textContent = elenco[i].indirizzo;
+        tr.appendChild(tdIndirizzo);
+
+        let tdCap = document.createElement("td");
+        tdCap.textContent = elenco[i].cap;
+        tr.appendChild(tdCap);
+
+        let tdSesso = document.createElement("td");
+        tdSesso.textContent = elenco[i].sesso;
+        tr.appendChild(tdSesso);
+
+        let tdAnno = document.createElement("td");
+        tdAnno.textContent = elenco[i].annoNascita;
+        tr.appendChild(tdAnno);
+
+        tabella.appendChild(tr);
+
+    }
+</script>
+
+<style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-family: Arial, sans-serif;
+    }
+    
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+    }
+</style>
+
+</html>

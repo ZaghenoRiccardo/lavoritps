@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pag1</title>
+</head>
+<body>
+    <h1>
+        Nome:
+    </h1>
+    <input type="text" id="nome">
+    <p id="pNomeTest" class="error"></p>
+    <br>
+    <h1>
+        Cognome:
+    </h1>
+    <input type="text" id="cognome">
+    <p id="pCognomeTest" class="error"></p>
+    <br>
+    <h1>
+        Email:
+    </h1>
+    <input type="text" id="email">
+    <p id="pEmailTest" class="error"></p>
+    <br>
+    <h1>
+        Codice Fiscale:
+    </h1>
+    <input type="text" id="codFiscale">
+    <p id="pCodFiscaleTest" class="error"></p>
+    <br>
+    <h1>
+        Città:
+    </h1>
+    <input type="text" id="citta">
+    <p id="pCittaTest" class="error"></p>
+    <br>
+    <h1>
+        Indirizzo:
+    </h1>
+    <input type="text" id="indirizzo">
+    <p id="pIndirizzoTest" class="error"></p>
+    <br>
+    <h1>
+        CAP:
+    </h1>
+    <input type="text" id="cap">
+    <p id="pCapTest" class="error"></p>
+    <br>
+    <h1>
+        Anno di nascita:
+    </h1>
+    <input type="text" id="annoNascita">
+    <p id="pAnnoNascitaTest" class="error"></p>
+    <br>
+    <h1>
+        Sesso:
+    </h1>
+    <label><input type="radio" name="sesso" value="Uomo">Uomo</label>
+    <br>
+    <label><input type="radio" name="sesso" value="Donna">Donna</label>
+    <br>
+    <label><input type="radio" name="sesso" value="Altro">Altro</label>
+    <br>
+    <input type="button" value="inserisci" onclick="controlla()">
+    <br>
+    <a href="ana6Tab.html">Passa alla seconda pagina</a>
+
+    <p id="controlloFinale" class="error"></p>
+</body>
+    
+<script>
+
+function controlla() {
+    let flag = false;
+
+    let nomeTest = document.getElementById("nome").value;
+    const nomeRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,50}$/;
+    if(nomeRegex.test(nomeTest) == false){
+        document.getElementById("pNomeTest").innerHTML = "Nome non valido!";
+        flag = true;
+    }else{
+        document.getElementById("pNomeTest").innerHTML = ""
+    }
+
+    let cognomeTest = document.getElementById("cognome").value;
+    const cognomeRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*$/;
+    if(cognomeRegex.test(cognomeTest) == false){
+        document.getElementById("pCognomeTest").innerHTML = "Cognome non valido!";
+        flag = true;
+    }else{
+        document.getElementById("pCognomeTest").innerHTML = ""
+    }
+
+    let emailTest = document.getElementById("email").value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(emailRegex.test(emailTest) == false){
+        document.getElementById("pEmailTest").innerHTML = "Email non valida!";
+        flag = true;
+    }else{
+        document.getElementById("pEmailTest").innerHTML = ""
+    }
+
+    let codFiscaleTest = document.getElementById("codFiscale").value;
+    const codFiscaleRegex = /^[A-Z]{6}[0-9]{2}[A-EHLMPRST][0-9]{2}[A-Z][0-9]{3}[A-Z]$/i;
+    if(codFiscaleRegex.test(codFiscaleTest) == false){
+        document.getElementById("pCodFiscaleTest").innerHTML = "Codice Fiscale non valido!";
+        flag = true;
+    }else{
+        document.getElementById("pCodFiscaleTest").innerHTML = ""
+    }
+
+    let cittaTest = document.getElementById("citta").value;
+    const cittaRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*$/;
+    if(cittaRegex.test(cittaTest) == false){
+        document.getElementById("pCittaTest").innerHTML = "Città non valida!";
+        flag = true;
+    }else{
+        document.getElementById("pCittaTest").innerHTML = ""
+    }
+
+    let indirizzoTest = document.getElementById("indirizzo").value;
+    const indirizzoRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s.,'\/-]{5,100}$/;
+    if(indirizzoRegex.test(indirizzoTest) == false){
+        document.getElementById("pIndirizzoTest").innerHTML = "Indirizzo non valido!";
+        flag = true;
+    }else{
+        document.getElementById("pIndirizzoTest").innerHTML = ""
+    }
+
+    let capTest = document.getElementById("cap").value;
+    const capRegex = /^\d{5}$/;
+    if(capRegex.test(capTest) == false){
+        document.getElementById("pCapTest").innerHTML = "CAP non valido!";
+        flag = true;
+    }else{
+        document.getElementById("pCapTest").innerHTML = ""
+    }
+
+    let annoTest = document.getElementById("annoNascita").value;
+    const annoRegex = /^(19\d{2}|20[0-2]\d)$/;
+    if(annoRegex.test(annoTest) == false){
+        document.getElementById("pAnnoNascitaTest").innerHTML = "Anno di nascita non valido!";
+        flag = true;
+    }else{
+        document.getElementById("pAnnoNascitaTest").innerHTML = ""
+    }
+
+    if (flag == true){
+        document.getElementById("controlloFinale").innerHTML = "Reinserire i dati non validi";
+    } else{
+        document.getElementById("controlloFinale").innerHTML = ""
+        ana();
+    }
+}
+
+function ana() {
+    let ele = JSON.parse(localStorage.getItem("elenco"));
+
+    let sex = "";
+    for (let i = 0; i < document.getElementsByName("sesso").length; i++) {
+            if (document.getElementsByName("sesso")[i].checked) {
+                sex = document.getElementsByName("sesso")[i].value;
+            }
+        }        
+
+    const persone = {
+        nome: document.getElementById("nome").value,
+        cognome: document.getElementById("cognome").value,
+        email: document.getElementById("email").value,
+        codFiscale: document.getElementById("codFiscale").value,
+        citta: document.getElementById("citta").value,
+        indirizzo: document.getElementById("indirizzo").value,
+        cap: document.getElementById("cap").value,
+        sesso: sex,
+        annoNascita: document.getElementById("annoNascita").value
+    };
+
+    ele.push(persone);
+
+    localStorage.setItem("elenco", JSON.stringify(ele));
+}
+</script>
+
+<style>
+
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 20px;
+        color: #333;
+            
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+        justify-content: center;
+ 
+
+    }
+    
+    table {
+        width: 80%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        background-color: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    th, td {
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+    
+    th {
+        background-color: #4CAF50;
+        color: white;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    
+    
+    
+    input[type="button"] {
+        display: block;
+        margin-top: 25px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    input[type="button"]:hover {
+        background-color: #45a049;
+    }
+    
+    td p {
+        margin: 0;
+    }
+
+    .error{
+        color: red;
+        font-size: large;
+    }
+    </style>
+
+    
+</html>
