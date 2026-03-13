@@ -1,1 +1,4 @@
-
+.carrelloIntestazione{
+    display: flex; 
+    gap: 0.5%;
+}
