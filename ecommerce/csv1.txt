@@ -1,0 +1,6 @@
+ /,nome,marca,descrizione,immagine,prezzo,dimensioni,taglia,spedizioni(gg)
+1,
+2,
+3,
+4,
+5,
