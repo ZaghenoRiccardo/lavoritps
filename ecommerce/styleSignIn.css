@@ -1,149 +1,91 @@
-/* =========================
-   RESET & BASE
-========================= */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+/* RESET BASE */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
-:root {
-    --bg-main: linear-gradient(135deg, #0f172a, #1e293b, #2563eb);
-    --glass: rgba(255, 255, 255, 0.08);
-    --glass-strong: rgba(255, 255, 255, 0.15);
-    --border: rgba(255,255,255,0.2);
-    --text: #e2e8f0;
-    --muted: #94a3b8;
-    --primary: #3b82f6;
-    --error: #f87171;
-}
-
+/* SFONDO EFFETTO GRADIENT */
 body {
-    min-height: 100vh;
-    background: var(--bg-main);
+    height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e293b, #3b82f6);
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-family: 'Inter', system-ui, sans-serif;
-    color: var(--text);
+    align-items: center;
 }
 
-/* =========================
-   CARD CONTAINER
-========================= */
+/* CONTAINER PRINCIPALE */
 body > div {
     width: 100%;
-    max-width: 440px;
-    padding: 35px;
+    max-width: 420px;
+    padding: 30px;
+    border-radius: 20px;
+    
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 
-    border-radius: 24px;
-    background: var(--glass);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
 
-    border: 1px solid var(--border);
-    box-shadow: 
-        0 25px 60px rgba(0,0,0,0.4),
-        inset 0 1px 0 rgba(255,255,255,0.1);
-
-    animation: enter 0.8s cubic-bezier(.2,.8,.2,1);
+    animation: fadeIn 0.8s ease;
 }
 
-/* =========================
-   TITLE
-========================= */
+/* TITOLO */
 body > div > div:first-child {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
     text-align: center;
-    margin-bottom: 30px;
-    letter-spacing: -0.5px;
 }
 
-/* =========================
-   FIELD GROUP
-========================= */
+/* GRUPPI INPUT */
 body > div > div {
-    position: relative;
-    margin-bottom: 22px;
+    margin-bottom: 18px;
 }
 
-/* =========================
-   INPUT STYLE
-========================= */
-input[type="text"],
-input[type="password"] {
+/* LABEL */
+p {
+    color: #e2e8f0;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+/* INPUT */
+input[type="text"] {
     width: 100%;
-    padding: 16px 14px;
-    border-radius: 14px;
-    border: 1px solid transparent;
-
-    background: rgba(255,255,255,0.06);
-    color: white;
-    font-size: 15px;
-
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: none;
     outline: none;
 
-    transition: all 0.25s ease;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+
+    transition: all 0.3s ease;
 }
 
-/* GLASS HOVER */
-input:hover {
-    background: rgba(255,255,255,0.1);
+/* PLACEHOLDER */
+input::placeholder {
+    color: #cbd5f5;
 }
 
 /* FOCUS */
 input:focus {
-    border: 1px solid var(--primary);
-    background: rgba(255,255,255,0.12);
-
-    box-shadow:
-        0 0 0 3px rgba(59,130,246,0.25),
-        0 8px 20px rgba(0,0,0,0.3);
-
-    transform: translateY(-1px);
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 0 0 2px #3b82f6;
+    transform: scale(1.02);
 }
 
-/* =========================
-   FLOATING LABEL
-========================= */
-p {
-    position: absolute;
-    left: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    
-    color: var(--muted);
-    font-size: 14px;
-
-    pointer-events: none;
-    transition: all 0.2s ease;
-}
-
-/* LABEL ACTIVE */
-input:focus + p,
-input:not(:placeholder-shown) + p {
-    top: -8px;
-    left: 10px;
-    font-size: 11px;
-    color: var(--primary);
-
-    background: #0f172a;
-    padding: 2px 6px;
-    border-radius: 6px;
-}
-
-/* =========================
-   BUTTON
-========================= */
+/* BOTTONE */
 input[type="button"] {
     width: 100%;
-    padding: 15px;
-
-    border-radius: 16px;
+    padding: 14px;
+    border-radius: 14px;
     border: none;
+    cursor: pointer;
 
     font-weight: 600;
     font-size: 16px;
@@ -151,97 +93,51 @@ input[type="button"] {
     background: linear-gradient(135deg, #3b82f6, #6366f1);
     color: white;
 
-    cursor: pointer;
-
-    transition: all 0.25s ease;
+    transition: all 0.3s ease;
 }
 
-/* HOVER */
+/* HOVER BOTTONE */
 input[type="button"]:hover {
-    transform: translateY(-3px);
-    box-shadow: 
-        0 15px 35px rgba(59,130,246,0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(59,130,246,0.5);
 }
 
 /* CLICK */
 input[type="button"]:active {
-    transform: scale(0.96);
+    transform: scale(0.97);
 }
 
-/* =========================
-   ERROR
-========================= */
+/* ERROR TEXT */
 #error {
+    color: #f87171;
     font-size: 12px;
-    margin-top: 6px;
-    color: var(--error);
-    opacity: 0.9;
+    margin-top: 4px;
 }
 
-/* =========================
-   ANIMATIONS
-========================= */
-@keyframes enter {
+/* ANIMAZIONE */
+@keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(40px) scale(0.96);
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
-        transform: translateY(0) scale(1);
+        transform: translateY(0);
     }
 }
 
-/* =========================
-   RESPONSIVE PRO
-========================= */
+/* RESPONSIVE */
 @media (max-width: 500px) {
-    body {
-        padding: 20px;
-    }
-
     body > div {
-        padding: 25px;
-        border-radius: 18px;
+        padding: 20px;
+        border-radius: 15px;
     }
 
     body > div > div:first-child {
-        font-size: 24px;
+        font-size: 22px;
     }
-}
 
-/* TABLET / DESKTOP ENHANCEMENT */
-@media (min-width: 768px) {
-    body > div {
-        max-width: 480px;
+    input[type="button"] {
+        padding: 12px;
     }
-}
-
-/* =========================
-   MICRO INTERACTIONS
-========================= */
-
-/* INPUT SHAKE ON ERROR (aggiungi classe via JS) */
-input.error {
-    border-color: var(--error);
-    animation: shake 0.3s;
-}
-
-@keyframes shake {
-    25% { transform: translateX(-4px); }
-    50% { transform: translateX(4px); }
-    75% { transform: translateX(-4px); }
-}
-
-/* GLOW EFFECT */
-body::before {
-    content: "";
-    position: fixed;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(59,130,246,0.3), transparent 70%);
-    top: -200px;
-    left: -200px;
-    z-index: -1;
-    filter: blur(80px);
 }
