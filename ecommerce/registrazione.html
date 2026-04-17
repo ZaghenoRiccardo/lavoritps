@@ -38,6 +38,7 @@
             <input type="text" id="email" placeholder="email">
             <p id="error"></p>
         </div>
+
         <div>
             <p>Password:</p>
             <input type="text" id="password" placeholder="password">
@@ -50,4 +51,67 @@
     </div>
 
 </body>
+
+<script>
+    function controlla(){
+        let flag = false;
+
+        let nomeTest = document.getElementById("nome").value;
+        const nomeRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,50}$/;
+        if(nomeRegex.test(nomeTest) == false){
+           flag = true;
+        }
+
+        let cognomeTest = document.getElementById("cognome").value;
+        const cognomeRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*$/;
+        if(cognomeRegex.test(cognomeTest) == false){
+         flag = true;
+        }
+
+        let indirizzoTest = document.getElementById("indirizzo").value;
+        const indirizzoRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s.,'\/-]{5,100}$/;
+        if(indirizzoRegex.test(indirizzoTest) == false){
+            flag = true;
+        }
+
+        let capTest = document.getElementById("cap").value;
+        const capRegex = /^\d{5}$/;
+        if(capRegex.test(capTest) == false){
+            flag = true;
+        }
+
+        let emailTest = document.getElementById("email").value;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(emailRegex.test(emailTest) == false){
+          flag = true;
+        }
+
+        let pswTest = document.getElementById("password").value;
+        const pswRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/; // (minimo 8 caratteri) almeno 1 lettera maiuscola almeno 1 minuscola almeno 1 numero almeno 1 simbolo
+        if (pswRegex.test(pswTest) == false){
+            flag = true;
+        }
+
+        if(flag == true){
+            document.getElementById("error").innerHTML ="Errore, ricontrollare i campi";
+        } else{
+            document.getElementById("error").innerHTML = "Registrazione Completata";
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        }
+
+    }
+</script>
+
 </html>
