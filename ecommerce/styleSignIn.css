@@ -110,7 +110,7 @@ input[type="button"]:active {
 /* ERROR TEXT */
 #error {
     color: #f87171;
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 4px;
 }
 
