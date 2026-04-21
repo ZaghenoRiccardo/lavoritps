@@ -50,45 +50,79 @@
 <script>
     function controlla(){
         let flag = false;
+        let flagNome = false;
+        let flagCognome = false;
+        let flagIndirizzo = false;
+        let flagCap = false;
+        let flagEmail = false;
+        let flagPsw = false;
 
         let nomeTest = document.getElementById("nome").value;
         const nomeRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,50}$/;
         if(nomeRegex.test(nomeTest) == false){
            flag = true;
+           flagNome = true;
         }
 
         let cognomeTest = document.getElementById("cognome").value;
         const cognomeRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*$/;
         if(cognomeRegex.test(cognomeTest) == false){
-         flag = true;
+            flag = true;
+            flagCognome = true;
         }
 
         let indirizzoTest = document.getElementById("indirizzo").value;
         const indirizzoRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s.,'\/-]{5,100}$/;
         if(indirizzoRegex.test(indirizzoTest) == false){
             flag = true;
+            flagIndirizzo = true;
         }
 
         let capTest = document.getElementById("cap").value;
         const capRegex = /^\d{5}$/;
         if(capRegex.test(capTest) == false){
             flag = true;
+            flagCap = true;
         }
 
         let emailTest = document.getElementById("email").value;
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if(emailRegex.test(emailTest) == false){
           flag = true;
+          flagEmail = true;
         }
 
         let pswTest = document.getElementById("password").value;
         const pswRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/; // (minimo 8 caratteri) almeno 1 lettera maiuscola almeno 1 minuscola almeno 1 numero almeno 1 simbolo
         if (pswRegex.test(pswTest) == false){
             flag = true;
+            flagPsw = true;
         }
 
         if(flag == true){
-            document.getElementById("error").innerHTML ="Errore, ricontrollare i campi";
+            let campi = "";
+
+            if (flagNome){
+                campi = campi + ", nome";
+            }
+            if (flagCognome){
+                campi = campi + ", cognome";
+            }
+            if(flagIndirizzo){
+                campi = campi + ", indirizzo";
+            }
+            if(flagCap){
+                campi = campi + ", cap";
+            }
+            if(flagEmail){
+                campi = campi + ", email";
+            }
+            if(flagPsw){
+                campi = campi + ", password";
+            }
+
+            document.getElementById("error").innerHTML ="Errore, ricontrollare i campi" + campi;
+
         } else{
             document.getElementById("error").innerHTML = "Registrazione Completata";
             setTimeout(() => {
