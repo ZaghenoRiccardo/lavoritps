@@ -123,13 +123,15 @@
 
             document.getElementById("error").innerHTML ="Errore, ricontrollare i campi" + campi;
 
-        } else{
-            document.getElementById("error").innerHTML = "Registrazione Completata";
-            setTimeout(() => {
-            window.location.href = "index.html";
-        }, 2000);
+        } else {
+            const errorEl = document.getElementById("error");
+            errorEl.innerHTML = "Registrazione Completata";
+            errorEl.style.color = "green";
 
-    }
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 2000);
+        }
 
 }
 </script>
