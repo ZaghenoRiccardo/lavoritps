@@ -128,9 +128,30 @@
             errorEl.innerHTML = "Registrazione Completata";
             errorEl.style.color = "green";
 
+            //Local Storage
+            uploadToDB();
+
             setTimeout(() => {
                 window.location.href = "index.html";
             }, 2000);
+        }
+
+        function uploadToDB(){
+            
+            let ele = JSON.parse(localStorage.getItem("elenco"));
+
+            const form = {
+                nome : document.getElementById("nome").value,
+                cognome : document.getElementById("cognome").value,
+                indirizzo: document.getElementById("indirizzo").value,
+                cap: document.getElementById("cap").value,
+                email: document.getElementById("email").value,
+                psw: document.getElementById("password").value
+            };
+
+            ele.push(form);
+
+            localStorage.setItem("elenco", JSON.stringify(ele));
         }
 
 }
