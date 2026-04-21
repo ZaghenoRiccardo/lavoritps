@@ -43,7 +43,10 @@
     <div>
         <a href="home.html">Home</a>
         <a href="carrello.html">Carrello</a>
-        <a href="registrazione.html">Registrati</a>
+        <span id="accountId">
+            <a href="registrazione.html">Registrati</a>
+        </span>
+        
     </div>
 
     <!--Div con prodotti-->
@@ -58,4 +61,15 @@
 
     </div>
 </body>
+
+<script>
+
+    function accountMenu(){
+        if (localStorage.getItem("elenco")){
+            let account = '<a href="account.html">Account</a>';
+            document.getElementById("accountId").innerHTML = account;
+        }
+    }
+</script>
+
 </html>
