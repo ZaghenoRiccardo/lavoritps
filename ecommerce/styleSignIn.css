@@ -116,7 +116,7 @@ input[type="button"]:active {
 
 #mostraPswBtn {
     width: auto !important;
-    padding: clamp(4px, 1.5vw, 8px) clamp(8px, 2.5vw, 14px) !important;
+    padding: clamp(4px, 1.5vw, 8px) clamp(8px, 5vw, 20px) !important;
     font-size: clamp(10px, 1.5vw, 13px) !important;
     border-radius: 8px !important;
 }
