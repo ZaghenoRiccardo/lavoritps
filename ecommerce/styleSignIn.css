@@ -117,7 +117,7 @@ input[type="button"]:active {
 #mostraPswDiv {
     display: flex;
     align-items: baseline;
-    gap: 8px; 
+    gap: 20%; 
 }
 
 /* ANIMAZIONE */
