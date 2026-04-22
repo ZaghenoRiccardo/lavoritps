@@ -114,10 +114,17 @@ input[type="button"]:active {
     margin-top: 4px;
 }
 
+#mostraPswBtn {
+    width: auto;
+    padding: clamp(4px, 1.5vw, 8px) clamp(8px, 2.5vw, 14px);
+    font-size: clamp(10px, 1.5vw, 13px);
+    border-radius: 8px;
+}
+
 #mostraPswDiv {
     display: flex;
     align-items: baseline;
-    gap: 20%; 
+    gap: clamp(16px, 4vw, 40px);
 }
 
 /* ANIMAZIONE */
