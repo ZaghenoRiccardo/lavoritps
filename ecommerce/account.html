@@ -56,15 +56,14 @@
 <script>
 
     let elenco = JSON.parse(localStorage.getItem("elenco"));
+    let utente = elenco[0];
 
-    let nome = localStorage.getItem("nome");
-    let cognomeUtente = localStorage.getItem("cognome");
-    let indirizzoUtente = localStorage.getItem("indirizzo");
-    let capUtente = localStorage.getItem("cap");
-    let emailUtente = localStorage.getItem("email");
-    let pswUtente = localStorage.getItem("psw");
-
-    document.getElementById("nomeUtente").textContent = "sdkjsd";
+    document.getElementById("nomeUtente").textContent = utente.nome;
+    document.getElementById("cognomeUtente").textContent = utente.cognome;
+    document.getElementById("indirizzoUtente").textContent = utente.indirizzo; 
+    document.getElementById("capUtente").textContent = utente.cap;
+    document.getElementById("emailUtente").textContent = utente.email; 
+    document.getElementById("pswUtente").textContent = utente.psw; 
     
 
 </script>
