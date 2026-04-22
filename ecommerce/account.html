@@ -47,12 +47,12 @@
                 
                 <p id="pswUtente"></p>
                 
-                <input type="button" value="mostra password" id="mostraPswBtn">
+                <input type="button" value="mostra password" id="mostraPswBtn" onclick="mostraPsw()">
                 
             </div>
         </div>
         <div>
-            <input type="button" value="Modifica i tuoi dati" id="cambiaDati" onclick="mostraPsw()">
+            <input type="button" value="Modifica i tuoi dati" id="cambiaDati">
         </div>
     </div>
 </body>
@@ -69,11 +69,11 @@
     document.getElementById("emailUtente").textContent = utente.email; 
     document.getElementById("pswUtente").textContent = "**********"; 
     
-
     function mostraPsw(){
         let utente = elenco[0];
-        document.getElementById("pswUtente").textContent = utente.psw;
+        document.getElementById("pswUtente").innerHTML = utente.psw;
     }
+
 </script>
 
 </html>
