@@ -114,15 +114,10 @@ input[type="button"]:active {
     margin-top: 4px;
 }
 
-#mostraPswDiv{
+#mostraPswDiv {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: baseline;
-}
-
-#mostraPswBtn{
-    width: 30%;
+    gap: 8px; 
 }
 
 /* ANIMAZIONE */
