@@ -149,7 +149,12 @@
                 psw: document.getElementById("password").value
             };
 
-            ele[0].push(form);
+            if (localStorage.getItem("elenco")) {
+                localStorage.removeItem("elenco"); 
+                ele = [];                           
+            }
+
+            ele.push(form);
 
             localStorage.setItem("elenco", JSON.stringify(ele));
         }
