@@ -138,8 +138,7 @@
 
         function uploadToDB(){
             
-            let ele = [];
-            ele = JSON.parse(localStorage.getItem("elenco"));
+            let ele = JSON.parse(localStorage.getItem("elenco")) || [];
 
             const form = {
                 nome : document.getElementById("nome").value,
