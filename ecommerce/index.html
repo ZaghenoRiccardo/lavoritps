@@ -50,7 +50,11 @@
     </div>
 
     <!--Div con prodotti-->
-    <div></div>
+    <div id="divProdotti">
+
+    
+
+    </div>
 
 
     <!--Footer con contatti-->
@@ -70,6 +74,60 @@
             document.getElementById("accountId").innerHTML = account;
         }
     }
+
+    let prodotti = document.getElementById("divProdotti")
+    window.addEventListener("load", async function () {
+    const response = await fetch('csv1.csv');
+    const blob = await response.blob();
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      const testo = e.target.result;
+      const dati = parseCSV(testo);
+    };
+    reader.readAsText(blob);
+  });
+
+  function parseCSV(testo) {
+    const righe = testo.trim().split("\n");
+    
+    for (var i = 1; i < righe.length; i++) { // parte da 1 per saltare l'intestazione
+        const col = righe[i].split(",");
+
+        const immagine    = col[4]?.trim();
+        const prezzo      = col[5]?.trim();
+        const marca       = col[2]?.trim();
+        const nome        = col[1]?.trim();
+        const dimensioni  = col[6]?.trim();
+        const taglia      = col[7]?.trim();
+        const spedizione  = col[8]?.trim();
+
+        prodotti.innerHTML += `
+            <div>
+                <img src="${immagine}" alt="${nome}">
+                <p>${prezzo}</p>
+                <div>
+                    <p>${marca}</p>
+                    <p>${nome}</p>
+                </div>
+                <div>
+                    <p>Dimensioni</p>
+                    <p>${dimensioni}</p>
+                </div>
+                <div>
+                    <p>Taglia</p>
+                    <p>${taglia}</p>
+                </div>
+                <div>
+                    <p>Tempo spedizione</p>
+                    <p>${spedizione}</p>
+                </div>
+            </div>
+        `;
+    }
+}
+
+
 </script>
 
 </html>
