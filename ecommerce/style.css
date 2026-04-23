@@ -145,12 +145,12 @@ hr {
 
 .titolo {
     display: flex;
-    gap: 3px; /* spazio tra marca e nome */
+    gap: 5px; /* spazio tra marca e nome */
 }
 
 .riga {
     display: flex;
-    gap: 3px; /* spazio tra label e valore */
+    gap: 5px; /* spazio tra label e valore */
 }
 
 /* ANIMAZIONE */
