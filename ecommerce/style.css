@@ -153,6 +153,34 @@ hr {
     gap: 5px; /* spazio tra label e valore */
 }
 
+/* BOTTONE */
+input[type="button"] {
+    width: 100%;
+    padding: 14px;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+
+    font-weight: 600;
+    font-size: 16px;
+
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    color: white;
+
+    transition: all 0.3s ease;
+}
+
+/* HOVER BOTTONE */
+input[type="button"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(59,130,246,0.5);
+}
+
+/* CLICK */
+input[type="button"]:active {
+    transform: scale(0.97);
+}
+
 /* ANIMAZIONE */
 @keyframes fadeIn {
     from {
