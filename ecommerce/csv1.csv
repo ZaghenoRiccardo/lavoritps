@@ -1,2 +1,12 @@
  /, nome, marca, descrizione, immagine, prezzo, dimensioni, taglia, spedizioni(gg)
 1 ,Les Paul 59,Gibson ,Gibson Les Paul 59, https://sc1.musik-produktiv.com/pic-010160304l/gibson-1959-les-paul-standard-reissue-vos-it-10160304.jpg,5.990€, Standard, Unica, 15gg
+2,Fender Stratocaster,Fender,Chitarra elettrica Fender Stratocaster,https://www.fmicassets.com/Damroot/Zoom/10001/011-8010-700_fen_ins_frt_1_rr.png,1.499€,Standard,Unica,7gg
+3,Ibanez RG550,Ibanez,Chitarra elettrica Ibanez RG550,https://www.ibanez.com/common/product_artist_file/file/p_region_RG550_DY_00_01.png,999€,Standard,Unica,5gg
+4,Yamaha Pacifica 112V,Yamaha,Chitarra elettrica Yamaha Pacifica,https://europe.yamaha.com/en/files/pac112v_735x735_396a3e2c41a07e3f4bbfbb72d8a73d4a.png,349€,Standard,Unica,3gg
+5,Fender Precision Bass,Fender,Basso elettrico Precision Bass,https://www.fmicassets.com/Damroot/Zoom/10001/014-9402-300_fen_ins_frt_1_rr.png,1.299€,Standard,Unica,7gg
+6,Yamaha P-45,Yamaha,Pianoforte digitale Yamaha P-45,https://europe.yamaha.com/en/files/P-45_1080x1080_2f89d63c36e4a2e6b7c1c9d2a7f2c6a3.png,499€,88 tasti,Unica,4gg
+7,Roland TD-1DMK,Roland,Batteria elettronica Roland TD-1DMK,https://static.roland.com/products/td-1dmk/images/gallery/td-1dmk_angle_gallery.jpg,699€,Standard,Unica,6gg
+8,Akai MPK Mini MK3,Akai,Controller MIDI compatto,https://www.akaipro.com/amfile/file/download/file/1606/product/848/,129€,Compatto,Unica,2gg
+9,Korg B2,Korg,Pianoforte digitale Korg B2,https://cdn.korg.com/us/products/upload/0b2f2a2e8e8e4c2a9a1c0e0e0e0e0e0e.png,399€,88 tasti,Unica,5gg
+10,Shure SM58,Shure,Microfono dinamico vocale,https://pubs.shure.com/guide/SM58/en-US/images/SM58.png,109€,Standard,Unica,2gg
+11,Boss DS-1,Boss,Pedale distorsione per chitarra,https://static.roland.com/assets/images/products/gallery/ds-1_angle_gallery.jpg,65€,Compatto,Unica,3gg
