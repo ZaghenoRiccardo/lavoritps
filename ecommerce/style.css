@@ -143,6 +143,11 @@ hr {
     background: rgba(255,255,255,0.2);
 }
 
+.titolo {
+    display: flex;
+    gap: 1px; /* spazio tra marca e nome */
+}
+
 .riga {
     display: flex;
     justify-content: space-between;
