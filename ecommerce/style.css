@@ -149,8 +149,7 @@ hr {
 
 .riga {
     display: flex;
-    justify-content: space-between;
-    gap: 10px; /* spazio tra label e valore */
+    gap: 1px; /* spazio tra label e valore */
 }
 
 /* ANIMAZIONE */
