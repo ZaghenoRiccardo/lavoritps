@@ -1,4 +1,4 @@
-/* RESET */
+/* RESET BASE */
 * {
     margin: 0;
     padding: 0;
@@ -6,52 +6,64 @@
     font-family: 'Inter', sans-serif;
 }
 
-/* SFONDO */
+/* SFONDO GRADIENT */
 body {
+    min-height: 100vh;
     background: linear-gradient(135deg, #0f172a, #1e293b, #3b82f6);
-    color: white;
-    padding: 20px;
+    padding: 30px;
 }
 
 /* HEADER */
-body > div:first-child {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    margin-bottom: 20px;
-    padding: 20px;
+    padding: 25px;
     border-radius: 20px;
+    margin-bottom: 20px;
 
-    background: rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
     border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+
+    animation: fadeIn 0.8s ease;
 }
 
 /* TITOLO */
 h1 {
     font-size: 28px;
+    font-weight: 700;
+    color: #fff;
 }
 
 /* CARRELLO */
 .carrelloIntestazione {
     display: flex;
     gap: 5px;
-    font-size: 14px;
     color: #e2e8f0;
+    font-size: 14px;
 }
 
 /* NAVBAR */
-body > div:nth-child(2) {
+.navbar {
     display: flex;
-    gap: 20px;
+    gap: 25px;
 
-    padding: 15px 20px;
-    margin-bottom: 20px;
-    border-radius: 15px;
+    padding: 18px 25px;
+    margin-bottom: 25px;
+    border-radius: 18px;
 
-    background: rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+    animation: fadeIn 0.9s ease;
 }
 
 /* LINK */
@@ -59,70 +71,73 @@ a {
     text-decoration: none;
     color: #cbd5f5;
     font-weight: 500;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 a:hover {
     color: #fff;
 }
 
-/* CONTAINER PRODOTTI */
-#divProdotti {
+/* GRID PRODOTTI */
+.prodotti {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 25px;
 }
 
 /* CARD PRODOTTO */
-#divProdotti > div {
-    padding: 15px;
-    border-radius: 18px;
+.prodotti > div {
+    padding: 18px;
+    border-radius: 20px;
 
-    background: rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
     border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
 
     transition: all 0.3s ease;
-    animation: fadeIn 0.6s ease;
+    animation: fadeIn 0.8s ease;
 }
 
 /* HOVER CARD */
-#divProdotti > div:hover {
+.prodotti > div:hover {
     transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
 }
 
 /* IMMAGINE */
-#divProdotti img {
+.prodotti img {
     width: 100%;
     height: 160px;
     object-fit: cover;
     border-radius: 12px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 /* TESTI */
-#divProdotti p {
-    font-size: 14px;
+.prodotti p {
     color: #e2e8f0;
+    font-size: 14px;
 }
 
 /* PREZZO */
-#divProdotti > div > p:first-of-type {
+.prodotti > div > p:first-child {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 600;
     color: #3b82f6;
     margin-bottom: 8px;
 }
 
-/* SEZIONI INTERNE */
-#divProdotti > div > div {
+/* SEZIONI INFO */
+.prodotti > div > div {
     margin-top: 8px;
 }
 
-/* FOOTER */
+/* FOOTER LINE */
 hr {
-    margin: 30px 0;
+    margin: 40px 0;
     border: none;
     height: 1px;
     background: rgba(255,255,255,0.2);
@@ -142,15 +157,20 @@ hr {
 
 /* RESPONSIVE */
 @media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
     h1 {
         font-size: 22px;
     }
 
-    .carrelloIntestazione {
-        font-size: 12px;
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
     }
 
-    #divProdotti {
+    .prodotti {
         grid-template-columns: 1fr;
     }
 }
