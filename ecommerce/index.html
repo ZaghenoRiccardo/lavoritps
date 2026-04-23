@@ -86,28 +86,34 @@
         const descrizione = col[3];
 
         prodotti.innerHTML += `
-            <div>
-                <img src="${immagine}" alt="${nome}">
-                <p>${prezzo}</p>
-                <div style="display: flex;">
-                    <p>${marca} </p>
-                    <p>${nome}</p>
-                </div>
-                <p>${descrizione}</p>
-                <div style="display: flex;">
-                    <p>Dimensioni: </p>
-                    <p>${dimensioni}</p>
-                </div>
-                <div style="display: flex;">
-                    <p>Taglia: </p>
-                    <p>${taglia}</p>
-                </div>
-                <div style="display: flex;">
-                    <p>Tempo spedizione: </p>
-                    <p>${spedizione}</p>
-                </div>
-            </div>
-        `;
+    <div class="card">
+        <img src="${immagine}" alt="${nome}">
+
+        <p class="prezzo">${prezzo}€</p>
+
+        <div class="riga titolo">
+            <p class="marca">${marca}</p>
+            <p class="nome">${nome}</p>
+        </div>
+
+        <p class="descrizione">${descrizione ?? ""}</p>
+
+        <div class="riga">
+            <p>Dimensioni:</p>
+            <p>${dimensioni}</p>
+        </div>
+
+        <div class="riga">
+            <p>Taglia:</p>
+            <p>${taglia}</p>
+        </div>
+
+        <div class="riga">
+            <p>Spedizione:</p>
+            <p>${spedizione}</p>
+        </div>
+    </div>
+`;
     }
 }
 
