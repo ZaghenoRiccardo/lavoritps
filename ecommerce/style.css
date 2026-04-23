@@ -144,7 +144,6 @@ hr {
 }
 
 .titolo {
-    display: flex;
     gap: 1px; /* spazio tra marca e nome */
 }
 
