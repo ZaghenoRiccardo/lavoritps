@@ -76,14 +76,14 @@
     for (var i = 1; i < righe.length; i++) { // parte da 1 per saltare l'intestazione
         const col = righe[i].split(",");
 
-        const immagine    = col[4]?.trim();
-        const prezzo      = col[5]?.trim();
-        const marca       = col[2]?.trim();
-        const nome        = col[1]?.trim();
-        const dimensioni  = col[6]?.trim();
-        const taglia      = col[7]?.trim();
-        const spedizione  = col[8]?.trim();
-        const descrizione = col[3]?.trim();
+        const immagine    = col[4];
+        const prezzo      = col[5];
+        const marca       = col[2];
+        const nome        = col[1];
+        const dimensioni  = col[6];
+        const taglia      = col[7];
+        const spedizione  = col[8];
+        const descrizione = col[3];
 
         prodotti.innerHTML += `
             <div>
@@ -91,7 +91,6 @@
                 <p>${prezzo}</p>
                 <div style="display: flex;">
                     <p>${marca}</p>
-                    <p> </p>
                     <p>${nome}</p>
                 </div>
                 <p>${descrizione}</p>
