@@ -43,11 +43,11 @@ h1 {
 .logoTitolo {
     display: flex;
     align-items: center;
-    gap: 15px; /* spazio tra logo e testo */
+    gap: 50px; /* spazio tra logo e testo */
 }
 
 .logoTitolo img {
-    width: 20px; /* puoi regolare */
+    width: 10px; /* puoi regolare */
     height: auto;
 }
 
