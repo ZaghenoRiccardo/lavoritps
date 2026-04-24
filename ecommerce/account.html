@@ -64,6 +64,7 @@
 
     let elenco = JSON.parse(localStorage.getItem("elenco"));
     let utente = elenco[0];
+    let countPsw = 0;
 
     document.getElementById("nomeUtente").textContent = utente.nome;
     document.getElementById("cognomeUtente").textContent = utente.cognome;
@@ -73,8 +74,15 @@
     document.getElementById("pswUtente").textContent = "**********"; 
     
     function mostraPsw(){
-        let utente = elenco[0];
-        document.getElementById("pswUtente").innerHTML = utente.psw;
+        if (countPsw == 0){
+            countPsw++;
+            let utente = elenco[0];
+            document.getElementById("pswUtente").innerHTML = utente.psw;
+        } else{
+            countPsw--;
+            document.getElementById("pswUtente").innerHTML = "**********";
+        }
+        
     }
 
 </script>
