@@ -43,12 +43,17 @@ h1 {
 .logoTitolo {
     display: flex;
     align-items: center;
-    gap: 50px; /* spazio tra logo e testo */
 }
 
-.logoTitolo img {
-    width: 10px; /* puoi regolare */
+.logo {
+    width: 45px;
     height: auto;
+    margin-right: 12px;
+}
+
+/* importante: rimuovi eventuali margin strani */
+.logoTitolo h1 {
+    margin: 0;
 }
 
 /* CARRELLO */
