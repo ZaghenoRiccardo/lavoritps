@@ -65,7 +65,7 @@
     let elenco = JSON.parse(localStorage.getItem("elenco"));
     let utente = elenco[0];
     let countPsw = 0;
-    
+
     document.getElementById("nomeUtente").textContent = utente.nome;
     document.getElementById("cognomeUtente").textContent = utente.cognome;
     document.getElementById("indirizzoUtente").textContent = utente.indirizzo; 
@@ -75,12 +75,16 @@
     
     function mostraPsw(){
         if (countPsw == 0){
+            let textBtn = "Nascondi Password";
             countPsw++;
             let utente = elenco[0];
             document.getElementById("pswUtente").innerHTML = utente.psw;
+            textBtn = document.getElementById("mostraPswBtn").value
         } else{
+            let textBtn = "Mostra Password";
             countPsw--;
             document.getElementById("pswUtente").textContent = "**********";
+            textBtn = document.getElementById("mostraPswBtn").value
         }
         
     }
