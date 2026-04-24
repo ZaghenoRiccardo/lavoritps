@@ -40,6 +40,17 @@ h1 {
     color: #fff;
 }
 
+.logoTitolo {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* spazio tra logo e testo */
+}
+
+.logoTitolo img {
+    width: 50px; /* puoi regolare */
+    height: auto;
+}
+
 /* CARRELLO */
 .carrelloIntestazione {
     display: flex;
