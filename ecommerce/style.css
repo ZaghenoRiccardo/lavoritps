@@ -46,8 +46,9 @@ h1 {
 }
 
 .logo {
-    width: 20%;
-    height: auto;
+    width: 2.5em;   /* relativo al font-size del contesto */
+    height: 2.5em;
+    object-fit: contain;
     margin-right: 12px;
 }
 
