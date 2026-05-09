@@ -75,7 +75,7 @@
   function parseCSV(testo) {
     const righe = testo.trim().split("\n");
     
-    for (var i = 1; i < righe.length; i++) { // parte da 1 per saltare l'intestazione
+    for (var i = 1; i < righe.length; i++) { 
         const col = righe[i].split(",");
 
         const immagine    = col[4]?.trim();
@@ -109,17 +109,80 @@
                     <p>${spedizione}</p>
                 </div>
                 <div>
-                    <input type="button" value="Aggiungi al Carrello" onclick="aggiungiCarrello()">
+                    <input type="button" value="Aggiungi al Carrello" 
+    onclick="aggiungiCarrello('${nome}', '${marca}', '${prezzo}', '${immagine}', this)">
+                    
                 </div>    
             </div>
         `;
     }
+}/*
+function aggiungiCarrello(nome, marca, prezzo) {
+
+    let eleP = JSON.parse(localStorage.getItem("elencoProdotti"));
+    eleP = [];
+
+    const prodotto = { nome, marca, prezzo, immagine };
+    eleP.push(prodotto);
+
+    localStorage.setItem("elencoProdotti", JSON.stringify(eleP));
+
 }
 
-function aggiungiCarrello() {
-    alert("Prodotto aggiunto al carrello!");
+*/
+function aggiungiCarrello(nome, marca, prezzo, immagine, btn) {
+    // Salva nel localStorage
+    let eleP = JSON.parse(localStorage.getItem("elencoProdotti")) || [];
+    const prodotto = { nome, marca, prezzo, immagine };
+    eleP.push(prodotto);
+    localStorage.setItem("elencoProdotti", JSON.stringify(eleP));
+
+    // Wrapper del bottone (position: relative)
+    const wrapper = btn.parentElement;
+
+    // --- PARTICELLE ---
+    const colori = ["#3b82f6","#6366f1","#22c55e","#f59e0b","#ec4899","#fff"];
+    for (let i = 0; i < 18; i++) {
+        const p = document.createElement("span");
+        p.classList.add("particella");
+        const angle = (i / 18) * 360;
+        const dist  = 50 + Math.random() * 60;
+        const rad   = angle * Math.PI / 180;
+        p.style.setProperty("--tx", `${Math.cos(rad) * dist}px`);
+        p.style.setProperty("--ty", `${Math.sin(rad) * dist}px`);
+        p.style.background = colori[Math.floor(Math.random() * colori.length)];
+        p.style.left = "50%";
+        p.style.top  = "50%";
+        p.style.marginLeft = "-4px";
+        p.style.marginTop  = "-4px";
+        wrapper.appendChild(p);
+        setTimeout(() => p.remove(), 800);
+    }
+
+    // --- PIÙ FLOTTANTE ---
+    const plus = document.createElement("span");
+    plus.classList.add("plus-float");
+    plus.textContent = "+1";
+    plus.style.left = "50%";
+    plus.style.top  = "0";
+    plus.style.transform = "translateX(-50%)";
+    wrapper.appendChild(plus);
+    setTimeout(() => plus.remove(), 1000);
+
+    // --- SOSTITUISCI BOTTONE ---
+    const nuovoBtn = document.createElement("div");
+    nuovoBtn.classList.add("btn-aggiunto");
+    nuovoBtn.style.animation = "btn-success 0.4s ease";
+    nuovoBtn.innerHTML = `<span style="animation: checkmark 0.4s ease forwards; display:inline-block;">✅</span> Aggiunto al carrello`;
+    wrapper.replaceChild(nuovoBtn, btn);
 }
+
+
 
 </script>
 
 </html>
+
+<!--
+<input type="button" value="Aggiungi al Carrello" onclick="aggiungiCarrello()">
+-->

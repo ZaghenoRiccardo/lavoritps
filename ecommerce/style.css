@@ -229,3 +229,84 @@ input[type="button"]:active {
         grid-template-columns: 1fr;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BOTTONE AGGIUNTO */
+.btn-aggiunto {
+    width: 100%;
+    padding: 14px;
+    border-radius: 14px;
+    border: none;
+    cursor: default;
+
+    font-weight: 600;
+    font-size: 16px;
+
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* PARTICELLE */
+@keyframes particle-explode {
+    0%   { transform: translate(0, 0) scale(1); opacity: 1; }
+    100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; }
+}
+
+@keyframes btn-success {
+    0%   { transform: scale(1); }
+    30%  { transform: scale(1.15); }
+    60%  { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+@keyframes checkmark {
+    0%   { opacity: 0; transform: scale(0) rotate(-20deg); }
+    60%  { transform: scale(1.3) rotate(5deg); opacity: 1; }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+@keyframes plus-float {
+    0%   { opacity: 1; transform: translateY(0) scale(1); }
+    100% { opacity: 0; transform: translateY(-60px) scale(1.5); }
+}
+
+.particella {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: particle-explode 0.7s ease-out forwards;
+}
+
+.plus-float {
+    position: absolute;
+    font-size: 28px;
+    font-weight: 800;
+    color: #22c55e;
+    pointer-events: none;
+    animation: plus-float 0.9s ease-out forwards;
+    text-shadow: 0 0 10px rgba(34,197,94,0.8);
+}
+
+/* assicurati che il wrapper del bottone sia relative */
+.prodotti > div > div:last-child {
+    position: relative;
+}
