@@ -83,50 +83,47 @@
     reader.readAsText(blob);
   });
 
-  function parseCSV(testo) {
-    const righe = testo.trim().split("\n");
-    
-    for (var i = 1; i < righe.length; i++) { 
-        const col = righe[i].split(",");
+  function mostraCarrello(eleP) {
+    let elencoCarrello = document.getElementById("layoutCarrello");
+    elencoCarrello.innerHTML = "";
+    let totale = 0;
 
-        const immagine    = col[4]?.trim();
-        const prezzo      = col[5]?.trim();
-        const marca       = col[2]?.trim();
-        const nome        = col[1]?.trim();
-        const dimensioni  = col[6]?.trim();
-        const taglia      = col[7]?.trim();
-        const spedizione  = col[8]?.trim();
-        const descrizione = col[3]?.trim();
+    for (let i = 0; i < eleP.length; i++) {
+        const prezzo   = eleP[i].prezzo;
+        const marca    = eleP[i].marca;
+        const nome     = eleP[i].nome;
+        const immagine = eleP[i].immagine;
 
-        prodotti.innerHTML += `
+        let totale = 0;
+        totale += eleP[i].prezzo;
+
+        elencoCarrello.innerHTML += `
             <div>
                 <img src="${immagine}" alt="${nome}">
                 <p style="text-align: center;">${prezzo}</p>
                 <div class="titolo">
-                    <p>${marca} </p>
+                    <p>${marca}</p>
                     <p>${nome}</p>
                 </div>
-                <p>${descrizione}</p>
-                <div class="riga">
-                    <p>Dimensioni: </p>
-                    <p>${dimensioni}</p>
-                </div>
-                <div class="riga">
-                    <p>Taglia: </p>
-                    <p>${taglia}</p>
-                </div>
-                <div class="riga">
-                    <p>Tempo spedizione: </p>
-                    <p>${spedizione}</p>
-                </div>
                 <div>
-                    <input type="button" value="Aggiungi al Carrello" 
-    onclick="aggiungiCarrello('${nome}', '${marca}', '${prezzo}', '${immagine}', this)">
-                    
-                </div>    
+                    <input type="button" value="Rimuovi dal Carrello" 
+                    onclick="rimuoviProdotto(${i})">
+                </div>
             </div>
         `;
     }
+
+    
+    elencoCarrello.innerHTML += `
+        <div class="riga">
+            <p>Articoli totali:</p>
+            <p>${eleP.length}</p>
+        </div>
+        <div class="riga">
+            <p><strong>Totale:</strong></p>
+            <p><strong>€${totale}</strong></p>
+        </div>
+    `;
 }
 
 function aggiungiCarrello(nome, marca, prezzo, immagine, btn) {

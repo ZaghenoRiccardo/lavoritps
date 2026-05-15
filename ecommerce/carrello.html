@@ -12,11 +12,35 @@
         <h1>
             Carrello:
         </h1>
+
+        <div id="layoutCarrello">
+        </div>
     </div>
 
 </body>
 
 <script>
+    let eleP = JSON.parse(localStorage.getItem("elencoProdotti")) || [];
+
+    function mostraCarrello(eleP){
+        let elencoCarrello = document.getElementById("layoutCarrello");
+        for(let i = 0; i < eleP.length; i++){
+            
+            const prezzo = eleP[i].prezzo;
+            const marca = eleP[i].marca;
+            const nome = eleP[i].nome;
+            const spedizione = eleP[i].spedizione;
+            const immagine = eleP[i].immagine;
+
+            elencoCarrello.innerHTML += '
+
+                <p></p>
+
+            ';
+        } 
+
+        
+    }
     
 </script>
 
