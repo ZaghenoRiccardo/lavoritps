@@ -52,10 +52,12 @@
 
 <script>
 
+    let eleP = JSON.parse(localStorage.getItem("elencoProdotti")) || [];
+
     function oggettiInCarrello(eleP){
         let nCarrello = eleP.length;
         if(nCarrello == 0){
-            document.getElementById("nOggettiCarrello").innerHTML = 0;
+            document.getElementById("nOggettiCarrello").innerHTML = "0";
         } else{
             document.getElementById("nOggettiCarrello").innerHTML = nCarrello;
         }
@@ -127,9 +129,8 @@
     }
 }
 
-function aggiungiCarrello(nome, marca, prezzo, immagine, btn) {
+function aggiungiCarrello(nome, marca, prezzo, immagine, btn, eleP) {
     
-    let eleP = JSON.parse(localStorage.getItem("elencoProdotti")) || [];
     const prodotto = { nome, marca, prezzo, immagine };
     eleP.push(prodotto);
     localStorage.setItem("elencoProdotti", JSON.stringify(eleP));
