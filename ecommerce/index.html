@@ -52,6 +52,13 @@
 
 <script>
 
+    let nCarrello = eleP.length;
+    if(nCarrello == 0){
+        document.getElementById("nOggettiCarrello").innerHTML = 0;
+    } else{
+        document.getElementById("nOggettiCarrello").innerHTML = nCarrello;
+    }
+
     function accountMenu(){
         if (localStorage.getItem("elenco")){
             let account = '<a href="account.html">Account</a>';
@@ -131,16 +138,14 @@ function aggiungiCarrello(nome, marca, prezzo) {
 
 */
 function aggiungiCarrello(nome, marca, prezzo, immagine, btn) {
-    // Salva nel localStorage
+    
     let eleP = JSON.parse(localStorage.getItem("elencoProdotti")) || [];
     const prodotto = { nome, marca, prezzo, immagine };
     eleP.push(prodotto);
     localStorage.setItem("elencoProdotti", JSON.stringify(eleP));
 
-    // Wrapper del bottone (position: relative)
     const wrapper = btn.parentElement;
 
-    // --- PARTICELLE ---
     const colori = ["#3b82f6","#6366f1","#22c55e","#f59e0b","#ec4899","#fff"];
     for (let i = 0; i < 18; i++) {
         const p = document.createElement("span");
@@ -159,7 +164,6 @@ function aggiungiCarrello(nome, marca, prezzo, immagine, btn) {
         setTimeout(() => p.remove(), 800);
     }
 
-    // --- PIÙ FLOTTANTE ---
     const plus = document.createElement("span");
     plus.classList.add("plus-float");
     plus.textContent = "+1";
@@ -169,7 +173,6 @@ function aggiungiCarrello(nome, marca, prezzo, immagine, btn) {
     wrapper.appendChild(plus);
     setTimeout(() => plus.remove(), 1000);
 
-    // --- SOSTITUISCI BOTTONE ---
     const nuovoBtn = document.createElement("div");
     nuovoBtn.classList.add("btn-aggiunto");
     nuovoBtn.style.animation = "btn-success 0.4s ease";
