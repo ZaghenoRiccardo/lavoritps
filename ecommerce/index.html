@@ -52,11 +52,13 @@
 
 <script>
 
-    let nCarrello = eleP.length;
-    if(nCarrello == 0){
-        document.getElementById("nOggettiCarrello").innerHTML = 0;
-    } else{
-        document.getElementById("nOggettiCarrello").innerHTML = nCarrello;
+    function oggettiInCarrello(eleP){
+        let nCarrello = eleP.length;
+        if(nCarrello == 0){
+            document.getElementById("nOggettiCarrello").innerHTML = 0;
+        } else{
+            document.getElementById("nOggettiCarrello").innerHTML = nCarrello;
+        }
     }
 
     function accountMenu(){
@@ -123,20 +125,8 @@
             </div>
         `;
     }
-}/*
-function aggiungiCarrello(nome, marca, prezzo) {
-
-    let eleP = JSON.parse(localStorage.getItem("elencoProdotti"));
-    eleP = [];
-
-    const prodotto = { nome, marca, prezzo, immagine };
-    eleP.push(prodotto);
-
-    localStorage.setItem("elencoProdotti", JSON.stringify(eleP));
-
 }
 
-*/
 function aggiungiCarrello(nome, marca, prezzo, immagine, btn) {
     
     let eleP = JSON.parse(localStorage.getItem("elencoProdotti")) || [];
@@ -186,6 +176,4 @@ function aggiungiCarrello(nome, marca, prezzo, immagine, btn) {
 
 </html>
 
-<!--
-<input type="button" value="Aggiungi al Carrello" onclick="aggiungiCarrello()">
--->
+
