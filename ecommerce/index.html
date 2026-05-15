@@ -129,11 +129,12 @@
     }
 }
 
-function aggiungiCarrello(nome, marca, prezzo, immagine, btn, eleP) {
+function aggiungiCarrello(nome, marca, prezzo, immagine, btn) {
     
     const prodotto = { nome, marca, prezzo, immagine };
     eleP.push(prodotto);
     localStorage.setItem("elencoProdotti", JSON.stringify(eleP));
+    oggettiInCarrello(eleP);
 
     const wrapper = btn.parentElement;
 
