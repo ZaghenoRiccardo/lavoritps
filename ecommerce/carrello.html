@@ -43,6 +43,7 @@
                     <p>${marca}</p>
                     <p>${nome}</p>
                     <p>${prezzo}€</p>
+                    
                     <input type="button" value="+" onclick="aggiungiProdotto(${i})">
                     <input type="button" value="-" onclick="rimuoviProdotto(${i})">
                 </div>
@@ -63,11 +64,21 @@
     `;
 }
 
-function rimuoviProdotto(prodotto){
-
+function rimuoviProdotto(i){
+    if (eleP[i].quantita > 1) {
+        eleP[i].quantita -= 1;
+    } else {
+        eleP.splice(i, 1); // rimuove il prodotto se quantità arriva a 0
+    }
+    localStorage.setItem("elencoProdotti", JSON.stringify(eleP));
+    mostraCarrello(eleP);
 }
 
-function aggiungiProdotto(prodotto){
+function aggiungiProdotto(i){
+    
+    eleP[i].quantita += 1;
+    localStorage.setItem("elencoProdotti", JSON.stringify(eleP));
+    mostraCarrello(eleP);
 
 }
     
