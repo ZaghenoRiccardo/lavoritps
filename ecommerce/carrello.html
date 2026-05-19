@@ -30,13 +30,12 @@
     let totale = 0;
 
     for (let i = 0; i < eleP.length; i++) {
-        const prezzo   = eleP[i].prezzo.parseInt();
+        const prezzo   = parseInt(eleP[i].prezzo);
         const marca    = eleP[i].marca;
         const nome     = eleP[i].nome;
         const immagine = eleP[i].immagine;
 
-        const prezzoNum = 0;
-        totale += eleP[i].prezzo;
+        totale += prezzo;
 
         elencoCarrello.innerHTML += `
             <div>
