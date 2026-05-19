@@ -107,6 +107,10 @@ input[type="button"]:active {
     transform: scale(0.97);
 }
 
+img{
+    size: 20%;
+}
+
 /* ERROR TEXT */
 #error {
     color: #f87171;
