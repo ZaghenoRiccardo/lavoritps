@@ -91,9 +91,9 @@ function aggiungiProdotto(i){
 
 }
 
-function ricevuta() {
+function ricevuta(totaleArticoli) {
 
-    if(totaleArticoli == 0){
+    if(eleP.length === 0){
         alert("Carrello vuoto, non posso stampare la ricevuta");
     }else{
         alert("Grazie per il tuo acquisto!");
