@@ -29,9 +29,7 @@
     let eleP = JSON.parse(localStorage.getItem("elencoProdotti" )) || [];
 
     function mostraCarrello(eleP) {
-    if (!eleP[i].quantita){
-        eleP[i].quantita = 1;
-    } 
+   
     let elencoCarrello = document.getElementById("layoutCarrello");
     elencoCarrello.innerHTML = "";
     let totale = 0;
