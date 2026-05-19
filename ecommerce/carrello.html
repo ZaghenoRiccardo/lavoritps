@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrello</title>
     <link rel="stylesheet" href="styleCarrello.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
 </head>
 <body onload=" mostraCarrello(eleP)" >
     
@@ -91,44 +92,29 @@ function aggiungiProdotto(i){
 }
 
 function ricevuta() {
-    
-    alert("Grazie per il tuo acquisto! La ricevuta verrà scaricata.");
 
+    alert("Grazie per il tuo acquisto!");
+
+    var doc = new jsPDF();
+
+    doc.text("RICEVUTA ACQUISTO", 10, 10);
+
+    let y = 35;
     let totale = 0;
-    let totaleArticoli = 0;
-    let contenuto = "=============================\n";
-    contenuto    += "        RICEVUTA ACQUISTO\n";
-    contenuto    += "=============================\n\n";
 
     for (let i = 0; i < eleP.length; i++) {
-        const quantita = eleP[i].quantita || 1;
-        const prezzo   = parseInt(eleP[i].prezzo);
+        const quantita  = eleP[i].quantita || 1;
+        const prezzo    = parseInt(eleP[i].prezzo);
         const subtotale = prezzo * quantita;
+        totale += subtotale;
 
-        totale         += subtotale;
-        totaleArticoli += quantita;
-
-        contenuto += `${eleP[i].marca} - ${eleP[i].nome}\n`;
-        contenuto += `  Prezzo unitario: ${prezzo}€\n`;
-        contenuto += `  Quantità: x${quantita}\n`;
-        contenuto += `  Subtotale: ${subtotale}€\n`;
-        contenuto += `-----------------------------\n`;
+        doc.text(eleP[i].marca + " " + eleP[i].nome + " - " + prezzo + "€ x" + quantita + " = " + subtotale + "€", 10, y);
+        y += 10;
     }
 
-    contenuto += `\nArticoli totali: ${totaleArticoli}`;
-    contenuto += `\nTOTALE: ${totale}€\n`;
-    contenuto += `\nData: ${new Date().toLocaleDateString("it-IT")}`;
-    contenuto += `\nOra: ${new Date().toLocaleTimeString("it-IT")}`;
-    contenuto += `\n\n=============================`;
+    doc.text("TOTALE: " + totale + "€", 10, y + 10);
 
-    // crea e scarica il file
-    const blob = new Blob([contenuto], { type: "text/plain" });
-    const url  = URL.createObjectURL(blob);
-    const a    = document.createElement("a");
-    a.href     = url;
-    a.download = "ricevuta.txt";
-    a.click();
-    URL.revokeObjectURL(url);
+    doc.save("ricevuta.pdf");
 
     localStorage.removeItem("elencoProdotti");
     eleP = [];
