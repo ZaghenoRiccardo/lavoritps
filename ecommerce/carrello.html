@@ -19,7 +19,7 @@
         </div>
         <div class = "bottoniFinali">
             <input type="button" value="Torna alla Home" onclick="window.location.href='index.html'">
-            <input type="button" value="Paga e Ricevuta">
+            <input type="button" value="Paga e Ricevuta" onclick="ricevuta()">
         </div> 
     </div>
 
@@ -88,6 +88,51 @@ function aggiungiProdotto(i){
     localStorage.setItem("elencoProdotti", JSON.stringify(eleP));
     mostraCarrello(eleP);
 
+}
+
+function ricevuta() {
+    
+    alert("Grazie per il tuo acquisto! La ricevuta verrà scaricata.");
+
+    let totale = 0;
+    let totaleArticoli = 0;
+    let contenuto = "=============================\n";
+    contenuto    += "        RICEVUTA ACQUISTO\n";
+    contenuto    += "=============================\n\n";
+
+    for (let i = 0; i < eleP.length; i++) {
+        const quantita = eleP[i].quantita || 1;
+        const prezzo   = parseInt(eleP[i].prezzo);
+        const subtotale = prezzo * quantita;
+
+        totale         += subtotale;
+        totaleArticoli += quantita;
+
+        contenuto += `${eleP[i].marca} - ${eleP[i].nome}\n`;
+        contenuto += `  Prezzo unitario: ${prezzo}€\n`;
+        contenuto += `  Quantità: x${quantita}\n`;
+        contenuto += `  Subtotale: ${subtotale}€\n`;
+        contenuto += `-----------------------------\n`;
+    }
+
+    contenuto += `\nArticoli totali: ${totaleArticoli}`;
+    contenuto += `\nTOTALE: ${totale}€\n`;
+    contenuto += `\nData: ${new Date().toLocaleDateString("it-IT")}`;
+    contenuto += `\nOra: ${new Date().toLocaleTimeString("it-IT")}`;
+    contenuto += `\n\n=============================`;
+
+    // crea e scarica il file
+    const blob = new Blob([contenuto], { type: "text/plain" });
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement("a");
+    a.href     = url;
+    a.download = "ricevuta.txt";
+    a.click();
+    URL.revokeObjectURL(url);
+
+    localStorage.removeItem("elencoProdotti");
+    eleP = [];
+    mostraCarrello(eleP);
 }
     
 </script>
