@@ -93,7 +93,10 @@ function aggiungiProdotto(i){
 
 function ricevuta() {
 
-    alert("Grazie per il tuo acquisto!");
+    if(eleP.length == 0){
+        alert("Carrello vuoto, non posso stampare la ricevuta");
+    }else{
+        alert("Grazie per il tuo acquisto!");
 
     var doc = new jsPDF();
 
@@ -120,6 +123,8 @@ function ricevuta() {
     eleP = [];
     mostraCarrello(eleP);
 }
+    }
+    
     
 </script>
 
