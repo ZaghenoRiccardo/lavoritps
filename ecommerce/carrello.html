@@ -30,7 +30,7 @@
     let totale = 0;
 
     for (let i = 0; i < eleP.length; i++) {
-        const prezzo   = eleP[i].prezzo;
+        const prezzo   = eleP[i].prezzo.parseInt();
         const marca    = eleP[i].marca;
         const nome     = eleP[i].nome;
         const immagine = eleP[i].immagine;
@@ -43,7 +43,7 @@
                 <div class="titolo">
                     <p>${marca}</p>
                     <p>${nome}</p>
-                    <p>${prezzo}</p>
+                    <p>${prezzo}€</p>
                     <input type="button" value="+" onclick="aggiungiProdotto(${i})">
                     <input type="button" value="-" onclick="rimuoviProdotto(${i})">
                 </div>
@@ -59,7 +59,7 @@
         </div>
         <div class="riga">
             <p><strong>Totale:</strong></p>
-            <p><strong>€${totale}</strong></p>
+            <p><strong>${totale}€</strong></p>
         </div>
     `;
 }

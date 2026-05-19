@@ -101,7 +101,7 @@
         prodotti.innerHTML += `
             <div>
                 <img src="${immagine}" alt="${nome}">
-                <p style="text-align: center;">${prezzo}</p>
+                <p style="text-align: center;">${prezzo}€</p>
                 <div class="titolo">
                     <p>${marca} </p>
                     <p>${nome}</p>
@@ -121,7 +121,7 @@
                 </div>
                 <div>
                     <input type="button" value="Aggiungi al Carrello" 
-    onclick="aggiungiCarrello('${nome}', '${marca}', '${prezzo}', '${immagine}', this)">
+    onclick="aggiungiCarrello('${nome}', '${marca}', '${prezzo}'€, '${immagine}', this)">
                     
                 </div>    
             </div>
