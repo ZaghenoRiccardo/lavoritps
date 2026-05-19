@@ -29,10 +29,10 @@
     let eleP = JSON.parse(localStorage.getItem("elencoProdotti" )) || [];
 
     function mostraCarrello(eleP) {
-   
     let elencoCarrello = document.getElementById("layoutCarrello");
     elencoCarrello.innerHTML = "";
     let totale = 0;
+    let totaleArticoli = 0;
 
     for (let i = 0; i < eleP.length; i++) {
         const prezzo   = parseInt(eleP[i].prezzo);
@@ -40,7 +40,11 @@
         const nome     = eleP[i].nome;
         const immagine = eleP[i].immagine;
 
-        totale += prezzo;
+        if (!eleP[i].quantita) eleP[i].quantita = 1;  // fix xundefined
+
+        const quantita = eleP[i].quantita;
+        totale += prezzo * quantita;           // prezzo × quantità
+        totaleArticoli += quantita;            // somma tutte le quantità
 
         elencoCarrello.innerHTML += `
             <div>
@@ -48,20 +52,18 @@
                     <p>${marca}</p>
                     <p>${nome}</p>
                     <p>${prezzo}€</p>
-                    <p>x${eleP[i].quantita}</p>
+                    <p>x${quantita}</p>
                     <input type="button" value="+" onclick="aggiungiProdotto(${i})">
                     <input type="button" value="-" onclick="rimuoviProdotto(${i})">
                 </div>
-                   
             </div>
         `;
     }
 
-    
     elencoCarrello.innerHTML += `
         <div class="riga">
             <p>Articoli totali:</p>
-            <p>${eleP.length}</p>
+            <p>${totaleArticoli}</p>
         </div>
         <div class="riga">
             <p><strong>Totale:</strong></p>
