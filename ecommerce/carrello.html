@@ -44,8 +44,8 @@
                     <p>${marca}</p>
                     <p>${nome}</p>
                     <p>${prezzo}</p>
-                    <input type="button" value="Rimuovi dal Carrello" onclick="rimuoviProdotto(${i})">
-                    <input type="button" value="Aggiungi al Carrello" onclick="aggiungiProdotto(${i})">
+                    <input type="button" value="+" onclick="aggiungiProdotto(${i})">
+                    <input type="button" value="-" onclick="rimuoviProdotto(${i})">
                 </div>
             </div>
         `;
@@ -69,7 +69,7 @@ function rimuoviProdotto(prodotto){
 }
 
 function aggiungiProdotto(prodotto){
-    
+
 }
     
 </script>
