@@ -112,11 +112,11 @@ function ricevuta(totaleArticoli) {
         const subtotale = prezzo * quantita;
         totale += subtotale;
 
-        doc.text(eleP[i].marca + " " + eleP[i].nome + " - " + prezzo + "\U20AC x" + quantita + " = " + subtotale + "\U20AC", 10, y);
+        doc.text(eleP[i].marca + " " + eleP[i].nome + " - " + prezzo + "'\u{20AC}' x" + quantita + " = " + subtotale + "'\u{20AC}'", 10, y);
         y += 10;
     }
 
-    doc.text("TOTALE: " + totale + "\U20AC", 10, y + 10);
+    doc.text("TOTALE: " + totale + "'\u{20AC}'", 10, y + 10);
 
     doc.save("ricevuta.pdf");
 
