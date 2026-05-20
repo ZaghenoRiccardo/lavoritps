@@ -100,6 +100,7 @@ function ricevuta(totaleArticoli) {
         alert("Grazie per il tuo acquisto!");
 
     let doc = new jsPDF();
+    const { jsPDF } = window.jspdf; 
 
     doc.text("RICEVUTA ACQUISTO", 10, 10);
 
