@@ -1,4 +1,4 @@
- /, nome, marca, descrizione, immagine, prezzo, dimensioni, taglia, spedizioni(gg)
+/, nome, marca, descrizione, immagine, prezzo, dimensioni, taglia, spedizioni(gg)
 1 ,Les Paul 59,Gibson,Gibson Les Paul 59,https://sc1.musik-produktiv.com/pic-010160304l/gibson-1959-les-paul-standard-reissue-vos-it-10160304.jpg,5990,Standard,Unica,15gg
 2 ,Stratocaster,Fender,Chitarra elettrica Fender Stratocaster,https://sc1.musik-produktiv.com/pic-010132319xxl/fender-custom-shop-1960-stratocaster-heavy-relic-10132319.jpg,1499,Standard,Unica,7gg
 3 ,RG550,Ibanez,Chitarra elettrica Ibanez RG550,https://sc1.musik-produktiv.com/pic-010103114xl/ibanez-rg550-dy-genesis-collection.jpg,999,Standard,Unica,5gg
@@ -10,3 +10,23 @@
 9 ,B2,Korg,Pianoforte digitale Korg B2,https://m.media-amazon.com/images/I/51nMLJbhxXL.jpg,399,88 tasti,Unica,5gg
 10 ,SM58,Shure,Microfono dinamico vocale,https://biasin.com/prodotti/2637/XXL/2637foto.jpg,109,Standard,Unica,2gg
 11 ,DS-1,Boss,Pedale distorsione per chitarra,https://r2.gear4music.com/media/29/293457/600/preview.jpg,65,Compatto,Unica,3gg
+12 ,SG Standard,Gibson,Chitarra elettrica Gibson SG Standard,https://sc1.musik-produktiv.com/pic-010159854l/gibson-sg-standard-silver-mist-10159854.jpg,1799,Standard,Unica,7gg
+13 ,Telecaster Player,Fender,Chitarra elettrica Fender Telecaster Player,https://sc1.musik-produktiv.com/pic-010155902l/fender-player-telecaster-mn-3ts-10155902.jpg,849,Standard,Unica,5gg
+14 ,ES-335,Gibson,Chitarra semiacustica Gibson ES-335,https://sc1.musik-produktiv.com/pic-010162320l/gibson-es-335-figured-blueberry-burst-10162320.jpg,3499,Semiacustica,Unica,10gg
+15 ,Jazz Bass,Fender,Basso elettrico Fender Jazz Bass,https://sc1.musik-produktiv.com/pic-010156019l/fender-player-jazz-bass-mn-bcr-10156019.jpg,1099,Standard,Unica,6gg
+16 ,P-125,Yamaha,Pianoforte digitale Yamaha P-125,https://r2.gear4music.com/media/77/773859/600/preview.jpg,699,88 tasti,Unica,4gg
+17 ,FP-30X,Roland,Pianoforte digitale Roland FP-30X,https://static.roland.com/assets/images/products/gallery/fp-30x_bk_gal.jpg,749,88 tasti,Unica,5gg
+18 ,TD-17KVX,Roland,Batteria elettronica Roland TD-17KVX,https://static.roland.com/assets/images/products/gallery/td-17kvx2_gal.jpg,1499,Standard,Unica,8gg
+19 ,MX49,Yamaha,Sintetizzatore Yamaha MX49,https://r2.gear4music.com/media/26/266108/600/preview.jpg,649,49 tasti,Unica,4gg
+20 ,Keystation 49 MK3,M-Audio,Controller MIDI M-Audio Keystation 49,https://r2.gear4music.com/media/82/823651/600/preview.jpg,189,49 tasti,Unica,3gg
+21 ,AW88 Pro,Behringer,Monitor da studio Behringer Truth B2031A,https://r2.gear4music.com/media/78/781300/600/preview.jpg,299,8 pollici,Unica,4gg
+22 ,AT2020,Audio-Technica,Microfono a condensatore Audio-Technica AT2020,https://r2.gear4music.com/media/19/197799/600/preview.jpg,99,Standard,Unica,2gg
+23 ,MXL 990,MXL,Microfono a condensatore MXL 990,https://r2.gear4music.com/media/11/117330/600/preview.jpg,79,Standard,Unica,3gg
+24 ,Scarlett Solo 4a Gen,Focusrite,Interfaccia audio Focusrite Scarlett Solo,https://r2.gear4music.com/media/98/981041/600/preview.jpg,129,Compatto,Unica,2gg
+25 ,DD-8,Boss,Pedale delay Boss DD-8,https://r2.gear4music.com/media/55/557044/600/preview.jpg,189,Compatto,Unica,3gg
+26 ,RV-6,Boss,Pedale riverbero Boss RV-6,https://r2.gear4music.com/media/32/329060/600/preview.jpg,179,Compatto,Unica,3gg
+27 ,Tube Screamer TS9,Ibanez,Pedale overdrive Ibanez Tube Screamer,https://r2.gear4music.com/media/10/100375/600/preview.jpg,119,Compatto,Unica,2gg
+28 ,Thunderbird,Gibson,Basso elettrico Gibson Thunderbird,https://sc1.musik-produktiv.com/pic-010158930l/gibson-thunderbird-bass-ebony-10158930.jpg,1799,Standard,Unica,8gg
+29 ,G&L ASAT Classic,G&L,Chitarra elettrica G&L ASAT Classic,https://sc1.musik-produktiv.com/pic-010147551l/gl-asat-classic-bbc2-rw-10147551.jpg,1299,Standard,Unica,7gg
+30 ,MK-61,Casio,Tastiera Casio CT-S300,https://r2.gear4music.com/media/57/575491/600/preview.jpg,89,61 tasti,Unica,2gg
+31 ,DM8,Alesis,Batteria elettronica Alesis DM8,https://r2.gear4music.com/media/42/426042/600/preview.jpg,499,Standard,Unica,5gg
