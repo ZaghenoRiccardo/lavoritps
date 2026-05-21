@@ -32,54 +32,54 @@
     let eleP = JSON.parse(localStorage.getItem("elencoProdotti" )) || [];
 
     function mostraCarrello(eleP) {
-    let elencoCarrello = document.getElementById("layoutCarrello");
-    elencoCarrello.innerHTML = "";
-    let totale = 0;
-    let totaleArticoli = 0;
+        let elencoCarrello = document.getElementById("layoutCarrello");
+        elencoCarrello.innerHTML = "";
+        let totale = 0;
+        let totaleArticoli = 0;
 
-    for (let i = 0; i < eleP.length; i++) {
-        const prezzo   = parseInt(eleP[i].prezzo);
-        const marca    = eleP[i].marca;
-        const nome     = eleP[i].nome;
-        const immagine = eleP[i].immagine;
+        for (let i = 0; i < eleP.length; i++) {
+            const prezzo   = parseInt(eleP[i].prezzo);
+            const marca    = eleP[i].marca;
+            const nome     = eleP[i].nome;
+            const immagine = eleP[i].immagine;
 
-        if (!eleP[i].quantita) eleP[i].quantita = 1;  // fix xundefined
+            if (!eleP[i].quantita) eleP[i].quantita = 1; 
 
-        const quantita = eleP[i].quantita;
-        totale += prezzo * quantita;           // prezzo × quantità
-        totaleArticoli += quantita;            // somma tutte le quantità
+            const quantita = eleP[i].quantita;
+            totale += prezzo * quantita;           
+            totaleArticoli += quantita;            
+
+            elencoCarrello.innerHTML += `
+                <div>
+                    <div class="titolo">
+                        <p>${marca}</p>
+                        <p>${nome}</p>
+                        <p>${prezzo}€</p>
+                        <p>x${quantita}</p>
+                        <input type="button" value="+" onclick="aggiungiProdotto(${i})">
+                       <input type="button" value="-" onclick="rimuoviProdotto(${i})">
+                   </div>
+                </div>
+            `;
+        }
 
         elencoCarrello.innerHTML += `
-            <div>
-                <div class="titolo">
-                    <p>${marca}</p>
-                    <p>${nome}</p>
-                    <p>${prezzo}€</p>
-                    <p>x${quantita}</p>
-                    <input type="button" value="+" onclick="aggiungiProdotto(${i})">
-                    <input type="button" value="-" onclick="rimuoviProdotto(${i})">
-                </div>
-            </div>
+            <div class="riga">
+               <p>Articoli totali:</p>
+               <p>${totaleArticoli}</p>
+          </div>
+          <div class="riga">
+              <p><strong>Totale:</strong></p>
+              <p><strong>${totale}€</strong></p>
+          </div>
         `;
     }
-
-    elencoCarrello.innerHTML += `
-        <div class="riga">
-            <p>Articoli totali:</p>
-            <p>${totaleArticoli}</p>
-        </div>
-        <div class="riga">
-            <p><strong>Totale:</strong></p>
-            <p><strong>${totale}€</strong></p>
-        </div>
-    `;
-}
 
 function rimuoviProdotto(i){
     if (eleP[i].quantita > 1) {
         eleP[i].quantita -= 1;
     } else {
-        eleP.splice(i, 1); // rimuove il prodotto se quantità arriva a 0
+        eleP.splice(i, 1); 
     }
     localStorage.setItem("elencoProdotti", JSON.stringify(eleP));
     mostraCarrello(eleP);
@@ -96,7 +96,7 @@ function aggiungiProdotto(i){
 function ricevuta(totaleArticoli) {
     if (eleP.length === 0) {
         alert("Carrello vuoto, non posso stampare la ricevuta");
-        return;  // esce subito
+        return;  
     }
 
     alert("Grazie per il tuo acquisto!");
