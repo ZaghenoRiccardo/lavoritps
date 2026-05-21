@@ -1,32 +1,61 @@
 /, nome, marca, descrizione, immagine, prezzo, dimensioni, taglia, spedizioni(gg)
-1 ,Les Paul 59,Gibson,Gibson Les Paul 59,https://sc1.musik-produktiv.com/pic-010160304l/gibson-1959-les-paul-standard-reissue-vos-it-10160304.jpg,5990,Standard,Unica,15gg
-2 ,Stratocaster,Fender,Chitarra elettrica Fender Stratocaster,https://sc1.musik-produktiv.com/pic-010132319xxl/fender-custom-shop-1960-stratocaster-heavy-relic-10132319.jpg,1499,Standard,Unica,7gg
-3 ,RG550,Ibanez,Chitarra elettrica Ibanez RG550,https://sc1.musik-produktiv.com/pic-010103114xl/ibanez-rg550-dy-genesis-collection.jpg,999,Standard,Unica,5gg
-4 ,Pacifica 112V,Yamaha,Chitarra elettrica Yamaha Pacifica,https://sc1.musik-produktiv.com/pic-010132194l/yamaha-pacifica-112v-ovs-10132194.jpg,349,Standard,Unica,3gg
-5 ,Precision Bass,Fender,Basso elettrico Precision Bass,https://r2.gear4music.com/media/59/592135/600/preview.jpg,1299,Standard,Unica,7gg
-6 ,P-45,Yamaha,Pianoforte digitale Yamaha P-45,https://r2.gear4music.com/media/16/165108/600/preview_2.jpg,499,88 tasti,Unica,4gg
-7 ,TD-1DMK,Roland,Batteria elettronica Roland TD-1DMK,https://static.roland.com/assets/images/products/gallery/td-1dmk_with_cymbal_gal.jpg,699,Standard,Unica,6gg
-8 ,MPK Mini MK3,Akai,Controller MIDI compatto,https://r2.gear4music.com/media/58/587070/600/preview.jpg,129,Compatto,Unica,2gg
-9 ,B2,Korg,Pianoforte digitale Korg B2,https://m.media-amazon.com/images/I/51nMLJbhxXL.jpg,399,88 tasti,Unica,5gg
-10 ,SM58,Shure,Microfono dinamico vocale,https://biasin.com/prodotti/2637/XXL/2637foto.jpg,109,Standard,Unica,2gg
-11 ,DS-1,Boss,Pedale distorsione per chitarra,https://r2.gear4music.com/media/29/293457/600/preview.jpg,65,Compatto,Unica,3gg
-12 ,SG Standard,Gibson,Chitarra elettrica Gibson SG Standard,https://sc1.musik-produktiv.com/pic-010159854l/gibson-sg-standard-silver-mist-10159854.jpg,1799,Standard,Unica,7gg
-13 ,Telecaster Player,Fender,Chitarra elettrica Fender Telecaster Player,https://sc1.musik-produktiv.com/pic-010155902l/fender-player-telecaster-mn-3ts-10155902.jpg,849,Standard,Unica,5gg
-14 ,ES-335,Gibson,Chitarra semiacustica Gibson ES-335,https://sc1.musik-produktiv.com/pic-010162320l/gibson-es-335-figured-blueberry-burst-10162320.jpg,3499,Semiacustica,Unica,10gg
-15 ,Jazz Bass,Fender,Basso elettrico Fender Jazz Bass,https://sc1.musik-produktiv.com/pic-010156019l/fender-player-jazz-bass-mn-bcr-10156019.jpg,1099,Standard,Unica,6gg
-16 ,P-125,Yamaha,Pianoforte digitale Yamaha P-125,https://r2.gear4music.com/media/77/773859/600/preview.jpg,699,88 tasti,Unica,4gg
-17 ,FP-30X,Roland,Pianoforte digitale Roland FP-30X,https://static.roland.com/assets/images/products/gallery/fp-30x_bk_gal.jpg,749,88 tasti,Unica,5gg
-18 ,TD-17KVX,Roland,Batteria elettronica Roland TD-17KVX,https://static.roland.com/assets/images/products/gallery/td-17kvx2_gal.jpg,1499,Standard,Unica,8gg
-19 ,MX49,Yamaha,Sintetizzatore Yamaha MX49,https://r2.gear4music.com/media/26/266108/600/preview.jpg,649,49 tasti,Unica,4gg
-20 ,Keystation 49 MK3,M-Audio,Controller MIDI M-Audio Keystation 49,https://r2.gear4music.com/media/82/823651/600/preview.jpg,189,49 tasti,Unica,3gg
-21 ,AW88 Pro,Behringer,Monitor da studio Behringer Truth B2031A,https://r2.gear4music.com/media/78/781300/600/preview.jpg,299,8 pollici,Unica,4gg
-22 ,AT2020,Audio-Technica,Microfono a condensatore Audio-Technica AT2020,https://r2.gear4music.com/media/19/197799/600/preview.jpg,99,Standard,Unica,2gg
-23 ,MXL 990,MXL,Microfono a condensatore MXL 990,https://r2.gear4music.com/media/11/117330/600/preview.jpg,79,Standard,Unica,3gg
-24 ,Scarlett Solo 4a Gen,Focusrite,Interfaccia audio Focusrite Scarlett Solo,https://r2.gear4music.com/media/98/981041/600/preview.jpg,129,Compatto,Unica,2gg
-25 ,DD-8,Boss,Pedale delay Boss DD-8,https://r2.gear4music.com/media/55/557044/600/preview.jpg,189,Compatto,Unica,3gg
-26 ,RV-6,Boss,Pedale riverbero Boss RV-6,https://r2.gear4music.com/media/32/329060/600/preview.jpg,179,Compatto,Unica,3gg
-27 ,Tube Screamer TS9,Ibanez,Pedale overdrive Ibanez Tube Screamer,https://r2.gear4music.com/media/10/100375/600/preview.jpg,119,Compatto,Unica,2gg
-28 ,Thunderbird,Gibson,Basso elettrico Gibson Thunderbird,https://sc1.musik-produktiv.com/pic-010158930l/gibson-thunderbird-bass-ebony-10158930.jpg,1799,Standard,Unica,8gg
-29 ,G&L ASAT Classic,G&L,Chitarra elettrica G&L ASAT Classic,https://sc1.musik-produktiv.com/pic-010147551l/gl-asat-classic-bbc2-rw-10147551.jpg,1299,Standard,Unica,7gg
-30 ,MK-61,Casio,Tastiera Casio CT-S300,https://r2.gear4music.com/media/57/575491/600/preview.jpg,89,61 tasti,Unica,2gg
-31 ,DM8,Alesis,Batteria elettronica Alesis DM8,https://r2.gear4music.com/media/42/426042/600/preview.jpg,499,Standard,Unica,5gg
+1, Les Paul 59, Gibson, Gibson Les Paul 59, https://sc1.musik-produktiv.com/pic-010160304l/gibson-1959-les-paul-standard-reissue-vos-it-10160304.jpg, 5990, Standard, Unica, 15gg
+2, Stratocaster, Fender, Chitarra elettrica Fender Stratocaster, https://sc1.musik-produktiv.com/pic-010132319xxl/fender-custom-shop-1960-stratocaster-heavy-relic-10132319.jpg, 1499, Standard, Unica, 7gg
+3, RG550, Ibanez, Chitarra elettrica Ibanez RG550, https://sc1.musik-produktiv.com/pic-010103114xl/ibanez-rg550-dy-genesis-collection.jpg, 999, Standard, Unica, 5gg
+4, Pacifica 112V, Yamaha, Chitarra elettrica Yamaha Pacifica, https://sc1.musik-produktiv.com/pic-010132194l/yamaha-pacifica-112v-ovs-10132194.jpg, 349, Standard, Unica, 3gg
+5, Precision Bass, Fender, Basso elettrico Precision Bass, https://r2.gear4music.com/media/59/592135/600/preview.jpg, 1299, Standard, Unica, 7gg
+6, P-45, Yamaha, Pianoforte digitale Yamaha P-45, https://r2.gear4music.com/media/16/165108/600/preview_2.jpg, 499, 88 tasti, Unica, 4gg
+7, TD-1DMK, Roland, Batteria elettronica Roland TD-1DMK, https://static.roland.com/assets/images/products/gallery/td-1dmk_with_cymbal_gal.jpg, 699, Standard, Unica, 6gg
+8, MPK Mini MK3, Akai, Controller MIDI compatto, https://r2.gear4music.com/media/58/587070/600/preview.jpg, 129, Compatto, Unica, 2gg
+9, B2, Korg, Pianoforte digitale Korg B2, https://m.media-amazon.com/images/I/51nMLJbhxXL.jpg, 399, 88 tasti, Unica, 5gg
+10, SM58, Shure, Microfono dinamico vocale, https://biasin.com/prodotti/2637/XXL/2637foto.jpg, 109, Standard, Unica, 2gg
+11, DS-1, Boss, Pedale distorsione per chitarra, https://r2.gear4music.com/media/29/293457/600/preview.jpg, 65, Compatto, Unica, 3gg
+12, SG Standard '61 Faded, Gibson, Chitarra elettrica Gibson SG Standard '61, https://sc1.musik-produktiv.com/pic-010172132l/gibson-sg-standard-61-faded.jpg, 1899, Standard, Unica, 8gg
+13, ES-335 Sixties Cherry, Gibson, Chitarra semiacustica Gibson ES-335, https://sc1.musik-produktiv.com/pic-010171158l/gibson-es-335-sixties-cherry.jpg, 3399, Semiacustica, Unica, 10gg
+14, ES-335 Vintage Burst, Gibson, Chitarra semiacustica Gibson ES-335, https://sc1.musik-produktiv.com/pic-010158630l/gibson-es-335-vintage-burst-10158630.jpg, 3399, Semiacustica, Unica, 10gg
+15, ES-345 Sixties Cherry, Gibson, Chitarra semiacustica Gibson ES-345, https://sc1.musik-produktiv.com/pic-010145852l/gibson-es-345-sixties-cherry.jpg, 3299, Semiacustica, Unica, 10gg
+16, Vintera III Tele BTB, Fender, Chitarra elettrica Fender Vintera III Telecaster, https://sc1.musik-produktiv.com/pic-010170544l/fender-vintera-iii-late-50-s-telecaster-btb.jpg, 1249, Standard, Unica, 6gg
+17, Vintera III Strat 3TS, Fender, Chitarra elettrica Fender Vintera III Stratocaster, https://sc1.musik-produktiv.com/pic-010170534l/fender-vintera-iii-late-50-s-strat-3-color-sunburst.jpg, 1249, Standard, Unica, 6gg
+18, Vintera III Strat Seafoam, Fender, Chitarra elettrica Fender Vintera III Strat Seafoam, https://sc1.musik-produktiv.com/pic-010170557l/fender-vintera-iii-early-60-s-strat-seafoam-green.jpg, 1249, Standard, Unica, 6gg
+19, Vintera III Jaguar, Fender, Chitarra elettrica Fender Vintera III Jaguar, https://sc1.musik-produktiv.com/pic-010170553l/fender-vintera-iii-mid-60-s-jaguar-shell-pink.jpg, 1349, Standard, Unica, 6gg
+20, Player II Strat HSS Black, Fender, Chitarra elettrica Fender Player II Stratocaster HSS, https://sc1.musik-produktiv.com/pic-010160491l/fender-player-ii-stratocaster-hss-mn-black.jpg, 849, Standard, Unica, 5gg
+21, Player II Strat Aquatone, Fender, Chitarra elettrica Fender Player II Stratocaster, https://sc1.musik-produktiv.com/pic-010160477l/fender-player-ii-stratocaster-mn-aquatone-blue.jpg, 822, Standard, Unica, 5gg
+22, Vintera II Antigua Strat, Fender, Chitarra elettrica Fender Vintera II Antigua, https://sc1.musik-produktiv.com/pic-010157554l/fender-vintera-ii-antigua-stratocaster.jpg, 1349, Standard, Unica, 6gg
+23, Am. Prof. II Strat Roasted, Fender, Chitarra Fender Am. Professional II Stratocaster, https://sc1.musik-produktiv.com/pic-010124378l/fender-american-professional-ii-stratocaster-rw-roasted-pine.jpg, 2199, Standard, Unica, 7gg
+24, Jim Root Jazzmaster, Fender, Chitarra elettrica Fender Jim Root Jazzmaster, https://sc1.musik-produktiv.com/pic-010072568l/fender-jim-root-jazzmaster-flat-black.jpg, 2259, Standard, Unica, 7gg
+25, Vintera III Jazz Bass AZG, Fender, Basso elettrico Fender Vintera III Jazz Bass, https://sc1.musik-produktiv.com/pic-010170801l/fender-vintera-iii-early-60s-jazz-bass-azg.jpg, 1299, Standard, Unica, 6gg
+26, Vintera III Jazz Bass 3TS, Fender, Basso elettrico Fender Vintera III Jazz Bass, https://sc1.musik-produktiv.com/pic-010170803l/fender-vintera-iii-early-70s-jazz-bass-3ts.jpg, 1399, Standard, Unica, 6gg
+27, Vintera III P-Bass Black, Fender, Basso elettrico Fender Vintera III Precision Bass, https://sc1.musik-produktiv.com/pic-010170804l/fender-vintera-iii-late-60s-p-bass-black.jpg, 1299, Standard, Unica, 6gg
+28, Player II P-Bass AQB, Fender, Basso elettrico Fender Player II Precision Bass, https://sc1.musik-produktiv.com/pic-010160437l/fender-player-ii-precision-bass-mn-aqb.jpg, 898, Standard, Unica, 5gg
+29, Am. Prof. II Jazz Bass 3TSB, Fender, Basso elettrico Fender Am. Professional II Jazz Bass, https://sc1.musik-produktiv.com/pic-010124600l/fender-american-professional-ii-jazz-bass-mn-3tsb.jpg, 2199, Standard, Unica, 7gg
+30, Am. Prof. Classic J-Bass, Fender, Basso elettrico Fender Am. Professional Classic Jazz Bass, https://sc1.musik-produktiv.com/pic-010167240l/fender-american-professional-classic-j-bass-rw-3-tsb.jpg, 1849, Standard, Unica, 7gg
+31, TD-07 DMK, Roland, Batteria elettronica Roland V-Drums TD-07 DMK, https://sc1.musik-produktiv.com/pic-010133403m/roland-v-drums-td-07-dmk-electronic-drum-kit.jpg, 698, Standard, Unica, 6gg
+32, TD-02K, Roland, Batteria elettronica Roland TD-02K Compact, https://sc1.musik-produktiv.com/pic-010150322m/roland-td-02k-compact-v-drum-set.jpg, 333, Compatto, Unica, 5gg
+33, TD-02KV, Roland, Batteria elettronica Roland TD-02KV Compact, https://sc1.musik-produktiv.com/pic-010150434m/roland-td-02kv-compact-v-drum-set.jpg, 649, Compatto, Unica, 5gg
+34, TD313 V-Drums, Roland, Batteria elettronica Roland TD313 V-Drums Kit, https://sc1.musik-produktiv.com/pic-010168823m/roland-td313-v-drums-kit.jpg, 1699, Standard, Unica, 7gg
+35, TD316 V-Drums, Roland, Batteria elettronica Roland TD316 V-Drums Kit, https://sc1.musik-produktiv.com/pic-010168824m/roland-td316-v-drums-kit.jpg, 2099, Standard, Unica, 8gg
+36, Yamaha YDP-165 WH Set, Yamaha, Pianoforte digitale Yamaha YDP-165 Set bianco, https://sc1.musik-produktiv.com/pic-010143891m/yamaha-ydp-165-wh-set.jpg, 1229, 88 tasti, Unica, 5gg
+37, Yamaha P-225 B, Yamaha, Pianoforte da palco Yamaha P-225, https://sc1.musik-produktiv.com/pic-010154458m/yamaha-p-225-b-home-set.jpg, 789, 88 tasti, Unica, 4gg
+38, Yamaha CLP-825 B Set, Yamaha, Pianoforte digitale Yamaha Clavinova CLP-825, https://sc1.musik-produktiv.com/pic-010163385m/yamaha-clp-825-b-set.jpg, 1449, 88 tasti, Unica, 6gg
+39, Casio Privia PX-S7000 BK, Casio, Pianoforte da palco Casio Privia PX-S7000, https://sc1.musik-produktiv.com/pic-010165543m/casio-privia-px-s7000-bk-set.jpg, 2239, 88 tasti, Unica, 5gg
+40, Donner DDP-80 Wood MKII, Donner, Pianoforte da palco Donner DDP-80 Wood, https://sc1.musik-produktiv.com/pic-010168615m/donner-ddp-80-wood-mkii.jpg, 499, 88 tasti, Unica, 4gg
+41, Shure Beta 58A, Shure, Microfono dinamico vocale Shure Beta 58A, https://sc1.musik-produktiv.com/pic-010100636m/marshall-dsl5cr.jpg, 185, Standard, Unica, 2gg
+42, SM57, Shure, Microfono per strumenti Shure SM57, https://sc1.musik-produktiv.com/pic-010106628m/marshall-mg15fx-10106628.jpg, 130, Standard, Unica, 2gg
+43, NT1 Signature Black, Rode, Microfono a condensatore Rode NT1, https://sc1.musik-produktiv.com/pic-010106630m/marshall-mg50fx-10106630.jpg, 144, Standard, Unica, 3gg
+44, Marshall MG15, Marshall, Amplificatore combo Marshall MG15, https://sc1.musik-produktiv.com/pic-010106626m/marshall-mg15-10106626.jpg, 99, Compatto, Unica, 3gg
+45, Marshall MG15FX, Marshall, Amplificatore combo Marshall MG15FX, https://sc1.musik-produktiv.com/pic-010106628m/marshall-mg15fx-10106628.jpg, 155, Compatto, Unica, 3gg
+46, Marshall DSL5CR, Marshall, Amplificatore combo Marshall DSL5CR valvolare, https://sc1.musik-produktiv.com/pic-010100636m/marshall-dsl5cr.jpg, 349, Compatto, Unica, 4gg
+47, Marshall MG50FX, Marshall, Amplificatore combo Marshall MG50FX, https://sc1.musik-produktiv.com/pic-010106630m/marshall-mg50fx-10106630.jpg, 299, Standard, Unica, 4gg
+48, Marshall DSL40CR, Marshall, Amplificatore combo Marshall DSL40CR valvolare, https://sc1.musik-produktiv.com/pic-010100659m/marshall-dsl40cr.jpg, 699, Standard, Unica, 5gg
+49, Marshall CODE25, Marshall, Amplificatore modelling Marshall CODE25, https://sc1.musik-produktiv.com/pic-010084871m/marshall-code25.jpg, 185, Compatto, Unica, 4gg
+50, RAT 2, Pro Co, Pedale distorsione Pro Co RAT 2, https://sc1.musik-produktiv.com/pic-003495001m/pro-co-rat-2.jpg, 95, Compatto, Unica, 2gg
+51, Big Muff PI 2, Electro Harmonix, Pedale fuzz Electro Harmonix Big Muff PI 2, https://sc1.musik-produktiv.com/pic-010170181m/electro-harmonix-big-muff-pi-2.jpg, 110, Compatto, Unica, 3gg
+52, Precision Drive, Horizon Devices, Pedale overdrive Horizon Devices Precision Drive, https://sc1.musik-produktiv.com/pic-010093120m/horizon-devices-precision-drive.jpg, 239, Compatto, Unica, 3gg
+53, Godzilla Distortion, Fender, Pedale distorsione Fender Godzilla, https://sc1.musik-produktiv.com/pic-010170591m/fender-godzilla-distortion.jpg, 169, Compatto, Unica, 3gg
+54, EBow Plus MK II, Heet Sound, Archetto elettronico EBow Plus, https://sc1.musik-produktiv.com/pic-003000161m/heet-sound-ebow-plus-mk-ii-energy-bow.jpg, 99, Compatto, Unica, 2gg
+55, Vintera III Tele SGM, Fender, Chitarra elettrica Fender Vintera III Telecaster Sage Green, https://sc1.musik-produktiv.com/pic-010170543l/fender-vintera-iii-late-50-s-telecaster-sgm.jpg, 1249, Standard, Unica, 6gg
+56, Vintera III Strat White, Fender, Chitarra elettrica Fender Vintera III Strat White Blonde, https://sc1.musik-produktiv.com/pic-010170542l/fender-vintera-iii-late-50-s-stratocaster-mn-white-blonde.jpg, 1399, Standard, Unica, 6gg
+57, Am. Perf. FSR Tele Mocha, Fender, Chitarra elettrica Fender Am. Performer Tele FSR, https://sc1.musik-produktiv.com/pic-010160425l/fender-american-performer-fsr-tele-tmbr-mocha.jpg, 1499, Standard, Unica, 6gg
+58, VQD106PADS V-Drums, Roland, Batteria elettronica Roland VQD106PADS V-Drums, https://sc1.musik-produktiv.com/pic-010162575m/roland-vqd106pads-v-drums-kit.jpg, 2049, Standard, Unica, 8gg
+59, TD-07KV V-Drums, Roland, Batteria elettronica Roland TD-07KV V-Drums, https://sc1.musik-produktiv.com/pic-010126065m/roland-td-07kv-v-drums-series-drumkit.jpg, 1017, Standard, Unica, 7gg
+60, Am. Vintage II Tele DLX, Fender, Chitarra elettrica Fender Am. Vintage II 1975 Telecaster Deluxe, https://sc1.musik-produktiv.com/pic-010148663l/fender-american-vintage-ii-1975-telecaster-deluxe-black.jpg, 2449, Standard, Unica, 7gg
